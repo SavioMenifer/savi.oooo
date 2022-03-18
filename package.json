@@ -1,0 +1,42 @@
+{
+  "name": "savi.oooo",
+  "version": "1.0.0",
+  "description": "Personal website v2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
+    "build:js": "webpack --mode=production",
+    "watch:js": "onchange \"src/js\" -- webpack --mode=development",
+    "build:html": "posthtml -c posthtml.json",
+    "watch:html": "onchange \"src/views\" -- npm run build:html",
+    "watch": "run-p serve watch:*",
+    "build": "run-p build:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SavioMenifer/savi.oooo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SavioMenifer/savi.oooo/issues"
+  },
+  "homepage": "https://github.com/SavioMenifer/savi.oooo#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "browser-sync": "^2.27.9",
+    "eslint": "^7.32.0",
+    "eslint-webpack-plugin": "^3.1.1",
+    "htmlnano": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "posthtml": "^0.16.6",
+    "posthtml-cli": "^0.10.0",
+    "posthtml-modules": "^0.8.0",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
