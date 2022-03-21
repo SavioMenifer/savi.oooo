@@ -22,34 +22,20 @@
   bottom: 0;
 }
 
-.tooltip {
-  display: inline-block;
-  position: relative;
-  background: #000000;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #fcfcfc;
-  padding: 10px;
-  vertical-align: middle;
-  left: 100px;
-  /*transition: all 0.3s ease-in-out;*/
-}
-.tooltip:after {
-  right: 100%;
-  top: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(0, 0, 0, 0);
-  border-right-color: #000000;
-  border-width: 6px;
-  margin-top: -6px;
-}
-
 .tooltip-container {
   background-color: aquamarine;
-  width: 300px;
+  width: 100px;
+  position: absolute;
+}
+
+.tooltip {
+}
+
+#arrow {
+  position: absolute;
+  background: aquamarine;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  z-index: -1;
 }
