@@ -5,7 +5,7 @@ import InertiaDrag from "./inertia-drag";
 const resistanceFactor = 0.8;
 const reboundFactor = 0.1;
 const $el = document.querySelector("#dragMe");
-const $container = document.querySelector("#container");
+//const $container = document.querySelector("#container");
 
 const inertiaDrag = new InertiaDrag($el);
 const elRect = $el.getBoundingClientRect();
@@ -16,12 +16,12 @@ const minY = 0;
 var maxX;
 var maxY;
 
-initValues();
+window.onload = initValues;
 window.onresize = initValues;
 
 function initValues() {
-  maxX = $container.offsetWidth - $el.offsetWidth;
-  maxY = $container.offsetHeight - $el.offsetHeight;
+  maxX = window.innerWidth - $el.offsetWidth;
+  maxY = window.innerHeight - $el.offsetHeight;
   onEnd();
 }
 
@@ -57,6 +57,7 @@ function onMove(event) {
 
   $el.style.transform = "translate( " + x2 + "px, " + y2 + "px )";
   moveTooltip();
+  checkUnder(x2, y2);
 }
 
 function onEnd() {
@@ -72,7 +73,7 @@ function onEnd() {
 
   $el.style.transform = "translate( " + x2 + "px, " + y2 + "px )";
   moveTooltip();
-  //checkUnder(x2, y2);
+  checkUnder(x2, y2);
   if (x2 < minX || x2 > maxX || y2 < minY || y2 > maxY)
     if (Math.abs(reboundX) > 1 || Math.abs(reboundY) > 1)
       requestAnimationFrame(onEnd);
@@ -93,11 +94,11 @@ import {
   offset,
 } from "@floating-ui/dom";
 
-const $tip = document.querySelector(".tooltip-container");
+const $tip_container = document.querySelector(".tooltip-container");
 const $arrow = document.querySelector("#arrow");
 
 function moveTooltip() {
-  computePosition($el, $tip, {
+  computePosition($el, $tip_container, {
     middleware: [
       shift(),
       autoPlacement(),
@@ -107,7 +108,7 @@ function moveTooltip() {
       }),
     ],
   }).then(({ x, y, placement, middlewareData }) => {
-    $tip.style.transform = "translate( " + x + "px, " + y + "px )";
+    $tip_container.style.transform = "translate( " + x + "px, " + y + "px )";
 
     const { x: arrowX, y: arrowY } = middlewareData.arrow;
 
@@ -128,7 +129,18 @@ function moveTooltip() {
 
 // Detect element under chathead
 
+const $tip = document.querySelector(".tooltip");
+const $tip_text = document.querySelector(".tooltip-text");
+
 function checkUnder(x, y) {
   const elem = document.elementFromPoint(x, y);
-  console.log(elem);
+  const chat = elem ? elem.getAttribute("chat") : null;
+  if (chat) {
+    $tip_text.innerHTML = chat;
+    $tip.style.transform = "scale(1, 1)";
+    $tip.style.opacity = "1";
+  } else {
+    $tip.style.transform = "scale(0, 0)";
+    $tip.style.opacity = "0";
+  }
 }

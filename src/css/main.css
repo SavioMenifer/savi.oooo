@@ -16,19 +16,18 @@
   position: fixed;
   top: 0;
   left: 0;
-  /*width: 600px;
-  height: 600px;*/
-  right: 0;
-  bottom: 0;
 }
 
 .tooltip-container {
-  background-color: aquamarine;
   width: 100px;
   position: absolute;
 }
 
 .tooltip {
+  background-color: aquamarine;
+  transition: transform 0.2s ease, opacity 0.1s ease;
+  transform: scale(0, 0);
+  opacity: 0;
 }
 
 #arrow {
