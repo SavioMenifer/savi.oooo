@@ -57,7 +57,7 @@ export class InertiaDrag {
   private _$el: Element;
   private _eventDispatcher = new EventDispatcher();
 
-  private _friction = 0.15;
+  private _friction = 0.1;
   // private _clientX = 0;
   // private _clientY = 0;
   private _dragStartX = 0;

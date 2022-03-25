@@ -1,4 +1,5 @@
 const ESLintPlugin = require("eslint-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/js/main.js",
@@ -28,5 +29,10 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
-  plugins: [new ESLintPlugin()],
+  plugins: [
+    new ESLintPlugin(),
+    new CopyPlugin({
+      patterns: [{ from: "./src/assets", to: "./assets" }],
+    }),
+  ],
 };

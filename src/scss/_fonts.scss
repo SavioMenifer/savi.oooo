@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Basic_Sans_Narrow";
+  src: url("../assets/webfonts/-BasicSansNarrowRegular.woff2") format("woff2"),
+    url("../assets/webfonts/-BasicSansNarrowRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Basic_Sans_Narrow_Semi";
+  src: url("../assets/webfonts/BasicSansNarrow-BasicSansNrSm.woff2")
+      format("woff2"),
+    url("../assets/webfonts/BasicSansNarrow-BasicSansNrSm.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Basic_Sans_Narrow_Lt";
+  src: url("../assets/webfonts/BasicSansNarrow-BasicSansNrLt.woff2")
+      format("woff2"),
+    url("../assets/webfonts/BasicSansNarrow-BasicSansNrLt.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

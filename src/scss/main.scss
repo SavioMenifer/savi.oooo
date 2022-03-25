@@ -1,6 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "variables";
+@import "fonts";
+@import "typography";
+
+body {
+  max-width: 40em;
+  margin: auto;
+}
 
 #dragMe {
   cursor: move;
@@ -37,4 +42,13 @@
   height: 8px;
   transform: rotate(45deg);
   z-index: -1;
+}
+
+.sidebar {
+  height: 100%;
+  display: fixed;
+}
+
+.sidebar-link {
+  display: block;
 }
