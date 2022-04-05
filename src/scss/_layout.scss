@@ -18,6 +18,9 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto 1fr;
+  margin: 0;
+  padding: 0 1em;
+  overflow-x: hidden;
 }
 
 .header-name {
@@ -29,12 +32,23 @@ body {
 }
 
 .work-card {
+  display: flex;
+  flex-direction: column;
   margin: 0 -1em;
-  padding: 1em;
+  padding: 0 1em;
+  overflow: hidden;
+  height: 20em;
 }
 
 .work-card:not(:last-child) {
   margin-bottom: 2em;
+}
+
+.work-card img {
+  object-fit: cover;
+  width: 110%;
+  height: auto;
+  margin: 0 -1em;
 }
 
 @media (min-width: 40em) {
@@ -49,6 +63,12 @@ body {
   .navigation {
     grid-column: 7/12;
     grid-row: 1;
+  }
+  .work-card {
+    flex-direction: row;
+  }
+  .work-card img {
+    margin: -1em -1em -1em 0;
   }
 }
 
@@ -82,9 +102,6 @@ body {
     grid-column: 2/4;
     grid-row: 2;
     flex-direction: column;
-  }
-  .work-card-text {
-    width: 50%;
   }
 }
 
