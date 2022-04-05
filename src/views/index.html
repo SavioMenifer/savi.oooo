@@ -8,7 +8,8 @@
   </head>
 
   <body>
-    <nav class="sidebar">
+    <header>
+      <div class="mii-slot"></div>
       <div id="container">
         <div id="dragMe"></div>
         <div class="tooltip-container">
@@ -19,14 +20,23 @@
         </div>
       </div>
 
-      <a class="sidebar-link" href="#">Work</a>
-      <a class="sidebar-link" href="#">About</a>
-      <a class="sidebar-link" href="#">CV</a>
-      <a class="sidebar-link" href="#">Lab</a>
+      <div>
+        <h2 class="header-name">Savio Menifer</h2>
+        <span>Interaction Designer</span>
+      </div>
+    </header>
+
+    <nav class="navigation">
+      <a class="nav-link" href="#">Work</a>
+      <a class="nav-link" href="#">About</a>
+      <a class="nav-link" href="#">Resume</a>
+      <a class="nav-link" href="#">Lab</a>
     </nav>
 
     <main>
-      <h1 chat="this is a title yeah">Imagine a future</h1>
+      <h1 class="main-title" chat="this is a title yeah">
+        Imagine a future here
+      </h1>
       <p>
         Lorem Ipsum is the single greatest threat. We are not - we are not
         keeping up with other websites. Lorem Ipsum best not make any more
@@ -34,20 +44,24 @@
         world has never seen.
       </p>
       <h2>Work</h2>
-      <h3>Firefly Island</h3>
-      <p>
-        This thesis presents an exploratory look into how intimacy can be
-        facilitated in social VR, by integrating theory and practice in the
-        design of Firefly Island, a social VR world focused on intimacy.
-      </p>
-      <a href="#">Read more</a>
-      <h3>Stargazing VR</h3>
-      <p>
-        This thesis presents an exploratory look into how intimacy can be
-        facilitated in social VR, by integrating theory and practice in the
-        design of Firefly Island, a social VR world focused on intimacy.
-      </p>
-      <a href="#">Read more</a>
+      <div class="work-card">
+        <h3>Firefly Island</h3>
+        <p class="work-card-text">
+          This thesis presents an exploratory look into how intimacy can be
+          facilitated in social VR, by integrating theory and practice in the
+          design of Firefly Island, a social VR world focused on intimacy.
+        </p>
+        <a href="#">Read more</a>
+      </div>
+      <div class="work-card">
+        <h3>Stargazing VR</h3>
+        <p class="work-card-text">
+          This thesis presents an exploratory look into how intimacy can be
+          facilitated in social VR, by integrating theory and practice in the
+          design of Firefly Island, a social VR world focused on intimacy.
+        </p>
+        <a href="#">Read more</a>
+      </div>
     </main>
 
     <script src="./bundle.js"></script>

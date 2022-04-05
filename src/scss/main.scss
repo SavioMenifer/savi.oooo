@@ -1,11 +1,7 @@
 @import "variables";
 @import "fonts";
 @import "typography";
-
-body {
-  max-width: 40em;
-  margin: auto;
-}
+@import "layout";
 
 #dragMe {
   cursor: move;
@@ -44,11 +40,13 @@ body {
   z-index: -1;
 }
 
-.sidebar {
-  height: 100%;
-  display: fixed;
+.mii-slot {
+  height: 80px;
+  width: 80px;
+  background-color: #bbb;
+  border-radius: 50%;
 }
 
-.sidebar-link {
-  display: block;
+.work-card {
+  background-color: #bbb;
 }
