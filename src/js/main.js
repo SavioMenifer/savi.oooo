@@ -1,11 +1,23 @@
 // Chathead implementation
 
 import InertiaDrag from "./inertia-drag";
+import {
+  computePosition,
+  shift,
+  autoPlacement,
+  arrow,
+  offset,
+} from "@floating-ui/dom";
 
 const resistanceFactor = 0.8;
 const reboundFactor = 0.1;
 const $el = document.querySelector("#dragMe");
-//const $container = document.querySelector("#container");
+const $container = document.querySelector("#container");
+
+const $tip_container = document.querySelector(".tooltip-container");
+const $arrow = document.querySelector("#arrow");
+const $tip = document.querySelector(".tooltip");
+const $tip_text = document.querySelector(".tooltip-text");
 
 const inertiaDrag = new InertiaDrag($el);
 const elRect = $el.getBoundingClientRect();
@@ -16,16 +28,20 @@ const minY = 0;
 var maxX;
 var maxY;
 
+var fixed = true; // is position==='fixed' for $el
+
 window.onload = initValues;
 window.onresize = initValues;
 
 function initValues() {
   maxX = window.innerWidth - $el.offsetWidth;
   maxY = window.innerHeight - $el.offsetHeight;
-  onEnd();
+  if (fixed) onEnd();
 }
 
 function onMove(event) {
+  $container.style.position = "fixed";
+  fixed = true;
   const elRect = $el.getBoundingClientRect();
   const x = event.deltaX + elRect.left - offsetLeft;
   const y = event.deltaY + elRect.top - offsetTop;
@@ -74,6 +90,7 @@ function onEnd() {
   $el.style.transform = "translate( " + x2 + "px, " + y2 + "px )";
   moveTooltip();
   checkUnder(x2, y2);
+  snapToSlot(x2, y2);
   if (x2 < minX || x2 > maxX || y2 < minY || y2 > maxY)
     if (Math.abs(reboundX) > 1 || Math.abs(reboundY) > 1)
       requestAnimationFrame(onEnd);
@@ -85,17 +102,6 @@ inertiaDrag.addEventListener("dragend", onEnd);
 inertiaDrag.addEventListener("inertiaend", onEnd);
 
 // Tooltip implementation
-
-import {
-  computePosition,
-  shift,
-  autoPlacement,
-  arrow,
-  offset,
-} from "@floating-ui/dom";
-
-const $tip_container = document.querySelector(".tooltip-container");
-const $arrow = document.querySelector("#arrow");
 
 function moveTooltip() {
   computePosition($el, $tip_container, {
@@ -129,9 +135,6 @@ function moveTooltip() {
 
 // Detect element under chathead
 
-const $tip = document.querySelector(".tooltip");
-const $tip_text = document.querySelector(".tooltip-text");
-
 function checkUnder(x, y) {
   const elem = document.elementFromPoint(x, y);
   const chat = elem ? elem.getAttribute("chat") : null;
@@ -142,5 +145,18 @@ function checkUnder(x, y) {
   } else {
     $tip.style.transform = "scale(0, 0)";
     $tip.style.opacity = "0";
+  }
+}
+
+const $slot = document.querySelector(".mii-slot");
+const slotRect = $slot.getBoundingClientRect();
+
+function snapToSlot(x, y) {
+  const elem = document.elementFromPoint(x, y);
+  if (elem && elem.className === "mii-slot") {
+    $el.style.transform =
+      "translate( " + slotRect.left + "px, " + slotRect.top + "px )";
+    $container.style.position = "absolute";
+    fixed = false;
   }
 }

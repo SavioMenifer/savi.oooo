@@ -2,40 +2,14 @@
 <html lang="en">
   <head>
     <title>Savio Menifer</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="./main.css" rel="stylesheet" />
+    <module href="/components/head.html"></module>
   </head>
 
-  <body>
-    <header>
-      <div class="mii-slot"></div>
-      <div id="container">
-        <div id="dragMe"></div>
-        <div class="tooltip-container">
-          <div class="tooltip">
-            <div class="tooltip-text"></div>
-            <div id="arrow"></div>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <h2 class="header-name">Savio Menifer</h2>
-        <span>Interaction Designer</span>
-      </div>
-    </header>
-
-    <nav class="navigation">
-      <a href="#">Work</a>
-      <a href="#">About</a>
-      <a href="#">Resume</a>
-      <a href="#">Lab</a>
-    </nav>
-
+  <body id="work">
+    <module href="/components/header.html"></module>
     <main>
-      <section>
-        <h1 class="main-title" chat="this is a title yeah">
+      <section class="intro">
+        <h1 class="intro-title" chat="this is a title yeah">
           Imagine a future here
         </h1>
         <p>
@@ -45,10 +19,10 @@
           world has never seen.
         </p>
       </section>
-      <section>
+      <section class="content">
         <h2>Work</h2>
         <div class="work-card">
-          <div>
+          <div class="work-card-text">
             <h3>Firefly Island</h3>
             <p>
               This thesis presents an exploratory look into how intimacy can be
@@ -61,7 +35,7 @@
           <img src="./assets/images/firefly_island/thumb.jpg" width="300" />
         </div>
         <div class="work-card">
-          <div>
+          <div class="work-card-text">
             <h3>Stargazing VR</h3>
             <p>
               This thesis presents an exploratory look into how intimacy can be
@@ -75,6 +49,7 @@
         </div>
       </section>
     </main>
+    <module href="/components/footer.html"></module>
 
     <script src="./bundle.js"></script>
   </body>
