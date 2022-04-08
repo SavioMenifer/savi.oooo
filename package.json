@@ -8,7 +8,7 @@
     "serve": "browser-sync start --server \"dist\" --files \"dist\"",
     "build:js": "webpack --mode=production",
     "watch:js": "onchange \"src/js\" -- webpack --mode=development",
-    "build:html": "posthtml -c posthtml.json",
+    "build:html": "npx @11ty/eleventy",
     "watch:html": "onchange \"src/views\" -- npm run build:html",
     "css:scss": "sass --style compressed src/scss/main.scss dist/main.css",
     "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/SavioMenifer/savi.oooo#readme",
   "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
     "@babel/preset-env": "^7.16.11",
     "@interactjs/types": "^1.10.11",
     "autoprefixer": "^10.4.4",

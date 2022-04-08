@@ -2,7 +2,9 @@
 title: Firefly Island
 subtitle: How can social VR support intimacy?
 date: 2022-01-31
-description:
+description: lorem ipsum
+tags: work
+layout: work
 ---
 
 Imagine a stranger coming up to you and patting you softly on your head. It would be bizarre if this happened to you in the real world. However, if you were hanging out on a social VR platform such as VRChat in a cute animal avatar, such an act could be expected and even welcomed. Social interactions in VR do not need to follow the existing conventions of the real world, as they can make use of the unique possibilities in a virtual reality that is not bound to the rules of the physical world.

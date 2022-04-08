@@ -1,3 +1,7 @@
+---
+permalink: index.html
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,8 +11,8 @@
 
   <body id="work">
     <module href="/components/header.html"></module>
-    <main>
-      <section class="intro">
+    <main class="primary-column">
+      <section class="page-intro">
         <h1 class="intro-title" chat="this is a title yeah">
           Imagine a future here
         </h1>
@@ -16,41 +20,25 @@
           Lorem Ipsum is the single greatest threat. We are not - we are not
           keeping up with other websites. Lorem Ipsum best not make any more
           threats to your website. It will be met with fire and fury like the
-          world has never seen.
+          world has never seend.
         </p>
       </section>
-      <section class="content">
+      <section class="page-content">
         <h2>Work</h2>
+        {% for work in collections.work reversed -%}
         <div class="work-card">
           <div class="work-card-text">
-            <h3>Firefly Island</h3>
-            <p>
-              This thesis presents an exploratory look into how intimacy can be
-              facilitated in social VR, by integrating theory and practice in
-              the design of Firefly Island, a social VR world focused on
-              intimacy.
-            </p>
-            <a href="#">Read more</a>
+            <h3>{{ work.data.title }}</h3>
+            <p>{{ work.data.description }}</p>
+            <a href="{{ work.url }}">Read more</a>
           </div>
           <img src="./assets/images/firefly_island/thumb.jpg" width="300" />
         </div>
-        <div class="work-card">
-          <div class="work-card-text">
-            <h3>Stargazing VR</h3>
-            <p>
-              This thesis presents an exploratory look into how intimacy can be
-              facilitated in social VR, by integrating theory and practice in
-              the design of Firefly Island, a social VR world focused on
-              intimacy.
-            </p>
-            <a href="#">Read more</a>
-          </div>
-          <img src="./assets/images/firefly_island/thumb.jpg" width="300" />
-        </div>
+        {% endfor -%}
       </section>
     </main>
     <module href="/components/footer.html"></module>
 
-    <script src="./bundle.js"></script>
+    <script src="/bundle.js"></script>
   </body>
 </html>
