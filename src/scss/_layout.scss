@@ -9,7 +9,8 @@ header,
 .content,
 footer,
 address,
-.navigation {
+.navigation,
+.about-tile {
   grid-column: span 12;
 }
 
@@ -36,7 +37,8 @@ body {
   overflow-x: hidden;
 }
 
-main {
+main,
+.content-grid {
   display: contents;
 }
 
@@ -75,7 +77,8 @@ main {
 @media (min-width: 40em) {
   .content,
   footer,
-  address {
+  address,
+  .about-tile {
     grid-column: 2/12;
   }
   .intro {
@@ -109,6 +112,13 @@ main {
   address {
     grid-column: 3/11;
   }
+  .about-tile {
+    grid-column: 3 / span 4;
+    padding-right: 2em;
+  }
+  .about-tile:nth-child(odd) {
+    grid-column: 7 / span 4;
+  }
   .intro {
     grid-column: 3/9;
   }
@@ -135,13 +145,20 @@ main {
     margin-top: 4em;
     margin-bottom: 2em;
   }
+  .about-tile {
+    grid-column: 4 / span 3;
+    grid-row: 3;
+  }
+  .about-tile:nth-child(odd) {
+    grid-column: 7 / span 3;
+  }
   address {
     grid-column: 2/4;
-    grid-row: 3;
+    grid-row: 4;
   }
   footer {
     grid-column: 4/10;
-    grid-row: 3;
+    grid-row: 4;
   }
   .header-name {
     margin-top: 1em;
