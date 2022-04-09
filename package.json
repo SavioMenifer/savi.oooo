@@ -9,7 +9,7 @@
     "build:js": "webpack --mode=production",
     "watch:js": "onchange \"src/js\" -- webpack --mode=development",
     "build:html": "npx @11ty/eleventy",
-    "watch:html": "onchange \"src/views\" -- npm run build:html",
+    "watch:html": "onchange \"src/views\" \"src/posts\" -- npm run build:html",
     "css:scss": "sass --style compressed src/scss/main.scss dist/main.css",
     "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
     "css:lint": "stylelint src/scss/*.scss  --custom-syntax postcss-scss",

@@ -20,31 +20,37 @@ const $tip = document.querySelector(".tooltip");
 const $tip_text = document.querySelector(".tooltip-text");
 
 const inertiaDrag = new InertiaDrag($el);
-const elRect = $el.getBoundingClientRect();
-const offsetLeft = elRect.left;
-const offsetTop = elRect.top;
+var containerRect;
+var offsetLeft;
+var offsetTop;
 const minX = 0;
 const minY = 0;
 var maxX;
 var maxY;
 
-var fixed = true; // is position==='fixed' for $el
+var fixed = false; // is position==='fixed' for $container
 
 window.onload = initValues;
 window.onresize = initValues;
 
 function initValues() {
+  containerRect = $container.getBoundingClientRect();
+  offsetLeft = containerRect.left;
+  offsetTop = containerRect.top;
   maxX = window.innerWidth - $el.offsetWidth;
   maxY = window.innerHeight - $el.offsetHeight;
   if (fixed) onEnd();
 }
 
 function onMove(event) {
-  $container.style.position = "fixed";
-  fixed = true;
+  if (!fixed) {
+    $container.style.position = "fixed";
+    $el.style.transition = "transform 0s";
+    fixed = true;
+  }
   const elRect = $el.getBoundingClientRect();
-  const x = event.deltaX + elRect.left - offsetLeft;
-  const y = event.deltaY + elRect.top - offsetTop;
+  const x = event.deltaX + elRect.left;
+  const y = event.deltaY + elRect.top;
 
   var resistanceX = 1;
   var resistanceY = 1;
@@ -73,13 +79,13 @@ function onMove(event) {
 
   $el.style.transform = "translate( " + x2 + "px, " + y2 + "px )";
   moveTooltip();
-  checkUnder(x2, y2);
+  checkUnder(x2 + offsetLeft, y2 + offsetTop);
 }
 
 function onEnd() {
   const elRect = $el.getBoundingClientRect();
-  const x = elRect.left - offsetLeft;
-  const y = elRect.top - offsetTop;
+  const x = elRect.left;
+  const y = elRect.top;
 
   const reboundX = x < minX ? minX - x : x > maxX ? maxX - x : 0;
   const reboundY = y < minY ? minY - y : y > maxY ? maxY - y : 0;
@@ -89,8 +95,8 @@ function onEnd() {
 
   $el.style.transform = "translate( " + x2 + "px, " + y2 + "px )";
   moveTooltip();
-  checkUnder(x2, y2);
-  snapToSlot(x2, y2);
+  checkUnder(x2 + offsetLeft, y2 + offsetTop);
+  snapToSlot(x2 + offsetLeft, y2 + offsetTop);
   if (x2 < minX || x2 > maxX || y2 < minY || y2 > maxY)
     if (Math.abs(reboundX) > 1 || Math.abs(reboundY) > 1)
       requestAnimationFrame(onEnd);
@@ -149,13 +155,18 @@ function checkUnder(x, y) {
 }
 
 const $slot = document.querySelector(".mii-slot");
-const slotRect = $slot.getBoundingClientRect();
 
 function snapToSlot(x, y) {
   const elem = document.elementFromPoint(x, y);
   if (elem && elem.className === "mii-slot") {
+    const slotRect = $slot.getBoundingClientRect();
+    $el.style.transition = "transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)";
     $el.style.transform =
-      "translate( " + slotRect.left + "px, " + slotRect.top + "px )";
+      "translate( " +
+      (slotRect.left - offsetLeft) +
+      "px, " +
+      (slotRect.top - offsetTop) +
+      "px )";
     $container.style.position = "absolute";
     fixed = false;
   }
