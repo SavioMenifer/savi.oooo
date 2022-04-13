@@ -39,8 +39,8 @@
 }
 
 .mii-slot {
-  height: 80px;
-  width: 80px;
+  height: 50px;
+  width: 50px;
   background-color: #bbb;
   border-radius: 50%;
 }
@@ -50,10 +50,8 @@
 }
 
 // highlight current page in nav menu
-#work .navigation .work-link,
-#about .navigation .about-link,
-#lab .navigation .lab-link {
+#work nav .work-link,
+#about nav .about-link,
+#lab nav .lab-link {
   font-weight: bold;
 }
-
-// about page
