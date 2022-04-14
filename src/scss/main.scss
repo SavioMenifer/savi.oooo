@@ -45,13 +45,10 @@
   border-radius: 50%;
 }
 
-.work-card {
-  background-color: #bbb;
+.mii {
+  z-index: 99;
 }
 
-// highlight current page in nav menu
-#work nav .work-link,
-#about nav .about-link,
-#lab nav .lab-link {
-  font-weight: bold;
+.work-card {
+  background-color: #bbb;
 }

@@ -26,3 +26,31 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "stiluregular";
+  src: url("../assets/webfonts/Stilu-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "stilubold";
+  src: url("../assets/webfonts/Stilu-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "boon400";
+  src: url("../assets/webfonts/boon-400.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "boon700";
+  src: url("../assets/webfonts/boon-700.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
