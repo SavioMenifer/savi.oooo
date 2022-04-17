@@ -20,6 +20,8 @@ module.exports = function (eleventyConfig) {
   let markdownItAttrs = require("markdown-it-attrs");
   let implicitFigures = require("markdown-it-image-figures");
   let html5Media = require("markdown-it-html5-embed");
+  let container = require("markdown-it-container");
+  let footnote = require("markdown-it-footnote");
   let options = {
     html: true,
     typographer: true,
@@ -32,7 +34,9 @@ module.exports = function (eleventyConfig) {
     })
     .use(html5Media, {
       useImageSyntax: true,
-    });
+    })
+    .use(container, "info")
+    .use(footnote);
 
   eleventyConfig.setLibrary("md", markdownLib);
 
