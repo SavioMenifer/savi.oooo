@@ -1,0 +1,58 @@
+.work > .heading {
+  font-size: 2em;
+}
+
+.work > .subheading {
+  font-size: 1.5em;
+}
+
+.work > figure {
+  display: contents;
+  margin: 0;
+}
+
+.work > figure > * {
+  width: 100%;
+}
+
+.work > figure.hero {
+  margin: 0 -1em;
+}
+
+.work > figure.hero > img {
+  object-fit: cover;
+  height: 30em;
+  margin: 0 -1em;
+  width: calc(100% + 2em);
+}
+
+.work-image.wide {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 40em) {
+  .work > figure > * {
+    grid-column: 2/12;
+  }
+  .work > figure.hero > img {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 60em) {
+  .work > figure > * {
+    grid-column: 4 / 12;
+  }
+  .work > figure.hero > img {
+    grid-column: 4 / 12;
+  }
+}
+
+@media (min-width: 80em) {
+  .work > .intro {
+    grid-column: 4 / 9;
+  }
+  .work > .info {
+    grid-column: 10 / 12;
+  }
+}

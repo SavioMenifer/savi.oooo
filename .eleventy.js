@@ -15,6 +15,27 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  //markdown-it plugins
+  let markdownIt = require("markdown-it");
+  let markdownItAttrs = require("markdown-it-attrs");
+  let implicitFigures = require("markdown-it-image-figures");
+  let html5Media = require("markdown-it-html5-embed");
+  let options = {
+    html: true,
+    typographer: true,
+  };
+  let markdownLib = markdownIt(options)
+    .use(markdownItAttrs)
+    .use(implicitFigures, {
+      figcaption: true,
+      copyAttrs: "^class$",
+    })
+    .use(html5Media, {
+      useImageSyntax: true,
+    });
+
+  eleventyConfig.setLibrary("md", markdownLib);
+
   return {
     dir: {
       input: "src",
