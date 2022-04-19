@@ -1,56 +1,56 @@
+/*
+Font: 		BasicSans Narrow
+Style: 		Regular, Regular It
+URL: 		https://www.youworkforthem.com/font/T6870/basic-sans-narrow
+Foundry: 	LatinoType
+Foundry: 	https://www.youworkforthem.com/designer/220/latinotype
+Copyright:	Copyright © 2016 by Daniel Hernandez. All rights reserved.
+Version: 	17
+Created:	September 15, 2016
+License: 	https://www.youworkforthem.com/font-license 
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted 
+			from using the WebFonts(s) listed without a purchased license. 
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
 @font-face {
-  font-family: "Basic_Sans_Narrow";
-  src: url("../assets/webfonts/-BasicSansNarrowRegular.woff2") format("woff2"),
-    url("../assets/webfonts/-BasicSansNarrowRegular.woff") format("woff");
+  font-family: "Basic Sans Narrow";
+  src: url("../assets/webfonts/basic-sans-narrow-regular.woff2") format("woff2"),
+    url("../assets/webfonts/basic-sans-narrow-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
-  font-family: "Basic_Sans_Narrow_Semi";
-  src: url("../assets/webfonts/BasicSansNarrow-BasicSansNrSm.woff2")
+  font-family: "Basic Sans Narrow";
+  src: url("../assets/webfonts/basic-sans-narrow-regular-italic.woff2")
       format("woff2"),
-    url("../assets/webfonts/BasicSansNarrow-BasicSansNrSm.woff") format("woff");
+    url("../assets/webfonts/basic-sans-narrow-regularialic.woff") format("woff");
   font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+  font-style: italic;
 }
 
 @font-face {
-  font-family: "Basic_Sans_Narrow_Lt";
-  src: url("../assets/webfonts/BasicSansNarrow-BasicSansNrLt.woff2")
-      format("woff2"),
-    url("../assets/webfonts/BasicSansNarrow-BasicSansNrLt.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "stiluregular";
-  src: url("../assets/webfonts/Stilu-Regular.otf") format("opentype");
-  font-weight: normal;
+  font-family: "Stilu";
+  src: url("../assets/webfonts/stilu-regular.woff2") format("woff2"),
+    url("../assets/webfonts/stilu-regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "stilubold";
-  src: url("../assets/webfonts/Stilu-Bold.otf") format("opentype");
-  font-weight: bold;
+  font-family: "Stilu";
+  src: url("../assets/webfonts/stilu-semibold.woff2") format("woff2"),
+    url("../assets/webfonts/stilu-semibold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "boon400";
-  src: url("../assets/webfonts/boon-400.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "boon700";
-  src: url("../assets/webfonts/boon-700.otf") format("opentype");
-  font-weight: normal;
+  font-family: "Stilu";
+  src: url("../assets/webfonts/stilu-bold.woff2") format("woff2"),
+    url("../assets/webfonts/stilu-bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }

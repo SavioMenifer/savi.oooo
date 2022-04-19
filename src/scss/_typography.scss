@@ -1,5 +1,5 @@
 body {
-  font-family: "Basic_Sans_Narrow", sans-serif;
+  font-family: "Basic Sans Narrow", sans-serif;
 }
 
 h1,
@@ -8,7 +8,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "stilubold", sans-serif;
+  font-family: "Stilu", sans-serif;
   margin: 1em 0 0.25em 0;
 }
 
@@ -26,17 +26,22 @@ a {
 nav a {
   text-decoration: none;
   transition: color 0.3s;
-  color: rgba(0, 0, 0, $nav-link-inactive-opacity);
+  opacity: $nav-link-inactive-opacity;
 }
 
 nav a:hover {
-  color: rgba(0, 0, 0, $nav-link-hover-opacity);
+  opacity: $nav-link-hover-opacity;
 }
 
 // highlight current page in nav menu
 #work nav .work-link,
+#work-page nav .work-link,
 #about nav .about-link,
 #lab nav .lab-link {
   font-weight: bold;
-  color: rgba(0, 0, 0, 1);
+  opacity: 1;
+}
+
+.work-card-text a {
+  text-decoration: none;
 }
