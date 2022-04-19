@@ -1,50 +1,122 @@
+#work-page .header-name {
+  display: none;
+}
+
+.work > .cover {
+  margin: 0 -1em;
+  object-fit: cover;
+  height: 30em;
+  width: calc(100% + 2em);
+}
+
 .work > .heading {
   font-size: 2em;
+  margin-top: 2em;
 }
 
 .work > .subheading {
   font-size: 1.5em;
+  margin-bottom: 2em;
+}
+
+.work > .larger {
+  font-size: 1.3em;
+  line-height: 1.4em;
+  margin-top: 1em;
+}
+
+.work > .intro {
+  margin-bottom: 2em;
+  margin-top: 0;
+}
+
+.work > .info {
+  margin-bottom: 2em;
+}
+
+.work > .info > h6:first-child {
+  margin-top: 0;
+}
+
+.work > .info > p {
+  font-size: 1em;
+}
+
+.work > .info > ul {
+  margin: 0 0 0.25em 0;
+  padding: 0;
+  list-style: none;
 }
 
 .work > figure {
   display: contents;
-  margin: 0;
 }
 
 .work > figure > * {
   width: 100%;
+  grid-column: 1 / -1;
 }
 
-.work > figure.hero {
-  margin: 0 -1em;
+.work > figure > :last-child {
+  margin-bottom: 2em;
 }
 
-.work > figure.hero > img {
-  object-fit: cover;
-  height: 30em;
-  margin: 0 -1em;
+.work > figure.wide > img {
+  grid-column: 1 / -1;
+  margin-left: -1em;
+  margin-right: -1em;
   width: calc(100% + 2em);
 }
 
-.work-image.wide {
-  grid-column: 1 / -1;
+.work > .mini-video {
+  margin-bottom: 2em;
+}
+
+.work > .mini-video figure {
+  margin: 0;
+}
+
+.work > .mini-video video {
+  width: 100%;
 }
 
 @media (min-width: 40em) {
   .work > figure > * {
     grid-column: 2/12;
   }
-  .work > figure.hero > img {
+  .work > .cover {
     grid-column: 1 / -1;
   }
 }
 
 @media (min-width: 60em) {
+  #work-page .header-name {
+    display: unset;
+  }
   .work > figure > * {
     grid-column: 4 / 12;
   }
-  .work > figure.hero > img {
+  .work > figure.wide > img {
     grid-column: 4 / 12;
+    border-radius: $work-page-border-radius;
+  }
+  .work > .cover {
+    grid-column: 4 / 12;
+    border-radius: 0 0 $work-page-border-radius $work-page-border-radius;
+  }
+  .work video {
+    border-radius: $work-page-border-radius;
+  }
+  .work > .mini-video {
+    display: contents;
+  }
+  .work > .mini-video > figure {
+    grid-column: 4 / 9;
+    padding-right: 2em;
+    margin-bottom: 2em;
+  }
+  .work > .mini-video > .group {
+    grid-column: 9 / 12;
   }
 }
 
@@ -54,5 +126,15 @@
   }
   .work > .info {
     grid-column: 10 / 12;
+  }
+  .work > .mini-video {
+    display: unset;
+    grid-column: 4 / 8;
+  }
+  .work > .mini-video:nth-child(even) {
+    grid-column: 8 / 12;
+  }
+  .work > .mini-video > figure {
+    margin-bottom: 0;
   }
 }

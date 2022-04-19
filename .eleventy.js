@@ -36,6 +36,8 @@ module.exports = function (eleventyConfig) {
       useImageSyntax: true,
     })
     .use(container, "info")
+    .use(container, "mini-video")
+    .use(container, "group")
     .use(footnote);
 
   eleventyConfig.setLibrary("md", markdownLib);

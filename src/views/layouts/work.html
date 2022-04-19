@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Savio Menifer</title>
+    <title>{{ title }} | Savio Menifer</title>
     <module href="/components/head.html"></module>
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ page.url }}" />
+    <meta property="og:image" content="{{ cover.src }}" />
+    <meta property="og:image:alt" content="{{ cover.alt }}" />
+    <meta property="og:description" content="{{ description }}" />
   </head>
 
-  <body id="work">
+  <body id="work-page">
     <module href="/components/header.html"></module>
     <main>
       <article class="page-content work">
-        <h1 class="work-title">{{ title }}</h1>
+        <img class="cover" src="{{ cover.src }}" alt="{{ cover.alt }}" />
+        <h1 class="heading">{{ title }}</h1>
+        <div class="subheading">{{ subtitle }}</div>
         {{ content }}
       </article>
+      <module href="/components/footer.html"></module>
     </main>
-    <module href="/components/footer.html"></module>
+    <module href="/components/contact.html"></module>
 
     <script src="/bundle.js"></script>
   </body>

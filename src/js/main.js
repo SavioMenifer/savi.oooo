@@ -28,7 +28,9 @@ const minY = 0;
 var maxX;
 var maxY;
 
-var fixed = false; // is position==='fixed' for $container
+var fixed = false; // is position==='sticky | fixed' for $container
+var fixedPosition = "fixed";
+const mediaQuery = window.matchMedia("(min-width: 60em)");
 
 window.onload = initValues;
 window.onresize = initValues;
@@ -39,12 +41,17 @@ function initValues() {
   offsetTop = containerRect.top;
   maxX = window.innerWidth - $el.offsetWidth;
   maxY = window.innerHeight - $el.offsetHeight;
+  if (mediaQuery.matches) {
+    fixedPosition = "sticky";
+  } else {
+    fixedPosition = "fixed";
+  }
   if (fixed) onEnd();
 }
 
 function onMove(event) {
   if (!fixed) {
-    $container.style.position = "fixed";
+    $container.style.position = fixedPosition;
     $el.style.transition = "transform 0s";
     fixed = true;
   }

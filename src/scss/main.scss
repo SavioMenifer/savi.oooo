@@ -53,3 +53,16 @@
 .work-card {
   background-color: #bbb;
 }
+
+.intro-svg {
+  user-select: none;
+}
+
+.about-photo {
+  image-rendering: -webkit-optimize-contrast; // fix for blurry image in chrome, wtf :(
+}
+
+a.external::after {
+  content: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png);
+  margin-left: 0.3em;
+}
