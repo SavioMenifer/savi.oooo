@@ -39,6 +39,7 @@ module.exports = function (eleventyConfig) {
     .use(container, "small-figure-text")
     .use(container, "large-figure-text")
     .use(container, "group")
+    .use(container, "slider")
     .use(footnote);
 
   eleventyConfig.setLibrary("md", markdownLib);

@@ -178,3 +178,51 @@ function snapToSlot(x, y) {
     fixed = false;
   }
 }
+
+// slider
+
+const $slider = document.querySelector(".slider");
+let pos = { top: 0, left: 0, x: 0, y: 0 };
+
+const mouseDownHandler = function (e) {
+  $slider.style.cursor = "grabbing";
+  $slider.style.userSelect = "none";
+
+  pos = {
+    left: $slider.scrollLeft,
+    top: $slider.scrollTop,
+    x: e.clientX,
+    y: e.clientY,
+  };
+
+  document.addEventListener("mousemove", mouseMoveHandler);
+  document.addEventListener("mouseup", mouseUpHandler);
+};
+
+const mouseMoveHandler = function (e) {
+  const dx = e.clientX - pos.x;
+  const dy = e.clientY - pos.y;
+
+  $slider.scrollTop = pos.top - dy;
+  $slider.scrollLeft = pos.left - dx;
+};
+
+const mouseUpHandler = function () {
+  document.removeEventListener("mousemove", mouseMoveHandler);
+  document.removeEventListener("mouseup", mouseUpHandler);
+
+  $slider.style.cursor = "grab";
+  $slider.style.removeProperty("user-select");
+};
+
+if ($slider) {
+  document.addEventListener("DOMContentLoaded", function () {
+    // $slider.style.overflowX = "hidden";
+    let images = $slider.getElementsByTagName("img");
+    for (const image of images) {
+      image.setAttribute("draggable", "false");
+      image.setAttribute("onmousedown", "return false");
+    }
+    $slider.addEventListener("mousedown", mouseDownHandler);
+  });
+}

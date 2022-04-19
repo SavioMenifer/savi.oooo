@@ -28,12 +28,19 @@ permalink: index.html
         <h2 class="work-list-heading" chat="yolo2">Work</h2>
         {% for work in collections.work reversed %}
         <div class="work-card">
+          <a href="{{ work.url }}">
+            <img src="./assets/images/firefly_island/thumb.jpg"
+          /></a>
           <div class="work-card-text">
-            <h3>{{ work.data.title }}</h3>
+            <a href="{{ work.url }}">
+              <h2 class="title">{{ work.data.title }}</h2>
+            </a>
             <p>{{ work.data.subtitle }}</p>
-            <a href="{{ work.url }}">Read more</a>
+            <span
+              class="blur"
+              style="background-color: {{ work.data.cover.blur-color }};"
+            ></span>
           </div>
-          <img src="./assets/images/firefly_island/thumb.jpg" width="300" />
         </div>
         {% endfor %}
       </section>

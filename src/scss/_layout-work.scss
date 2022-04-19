@@ -88,6 +88,34 @@
   width: 100%;
 }
 
+.work > .slider {
+  display: flex;
+  overflow-x: scroll;
+  cursor: grab;
+  border-radius: $work-page-border-radius;
+}
+
+.work > .slider > figure {
+  display: contents;
+}
+
+.work > .slider > figure > img {
+  width: calc(50vw);
+  border-radius: $work-page-border-radius;
+}
+
+.work > .slider > figure:not(:last-child) > img {
+  margin-right: 2em;
+}
+
+.work > .footnotes {
+  font-size: 0.75em;
+}
+
+.work .footnotes-list {
+  padding-left: 1em;
+}
+
 @media (min-width: 40em) {
   .work > figure > * {
     grid-column: 2/12;
@@ -139,7 +167,7 @@
     display: unset;
     grid-column: 4 / 8;
   }
-  .work > .small-figure-text:nth-child(even) {
+  .work > .small-figure-text:nth-child(odd) {
     grid-column: 8 / 12;
   }
   .work > .small-figure-text > figure {
@@ -158,5 +186,8 @@
   }
   .work > .large-figure-text > .group {
     grid-column: 9 / 12;
+  }
+  .work > .slider {
+    grid-column: 4 / 12;
   }
 }

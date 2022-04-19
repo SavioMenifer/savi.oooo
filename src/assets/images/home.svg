@@ -52,6 +52,23 @@
       .cls-13 {
         fill: #f9ed32;
       }
+
+      #moon,
+      #fireflies {
+        display: none;
+      }
+
+      @media (prefers-color-scheme: dark) {
+
+        #moon,
+        #fireflies {
+          display: unset;
+        }
+
+        #sun {
+          display: none;
+        }
+      }
     </style>
     <radialGradient id="radial-gradient" cx="95.13" cy="212.95" r="77.27" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#00aeef" />

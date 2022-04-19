@@ -1,6 +1,7 @@
 @import "variables";
 @import "fonts";
 @import "typography";
+@import "colors";
 @import "layout";
 @import "layout-work";
 
@@ -48,10 +49,6 @@
 
 .mii {
   z-index: 99;
-}
-
-.work-card {
-  background-color: #bbb;
 }
 
 .intro-svg {

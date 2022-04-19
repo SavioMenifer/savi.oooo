@@ -1,0 +1,23 @@
+$body-bg-color-light: #f3f3f3;
+$primary-text-color-light: #333;
+
+$body-bg-color-dark: #15141a;
+$primary-text-color-dark: #fbfbfe;
+
+body {
+  background-color: $body-bg-color-light;
+  color: $primary-text-color-light;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $body-bg-color-dark;
+    color: $primary-text-color-dark;
+  }
+}
+
+@media (min-width: 40em) {
+  .work-card-text {
+    color: $primary-text-color-dark;
+  }
+}
