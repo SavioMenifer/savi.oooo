@@ -55,7 +55,7 @@ Firefly Island features multiple activities and interactive elements for users t
 
 The activities on Firefly Island took inspiration from many sources, which led to some crazy ideas in the end {.larger}
 
-:::: mini-video
+:::: small-figure-text
 ![alt text firefly video](/assets/work/firefly_island/flowers.mp4)
 ::: group
 #### Play hide and seek by catching fireflies
@@ -63,7 +63,7 @@ The classic game, but with a twist. Catching fireflies makes the hider go invisi
 :::
 ::::
 
-:::: mini-video
+:::: small-figure-text
 ![alt text firefly video](/assets/work/firefly_island/flowers.mp4)
 ::: group
 #### Create a memory jar together
@@ -71,7 +71,7 @@ Taking advantage of the co-creation affordance in VR, this activity allows users
 :::
 ::::
 
-:::: mini-video
+:::: small-figure-text
 ![alt text firefly video](/assets/work/firefly_island/flowers.mp4)
 ::: group
 #### Play with magic witch hats
@@ -79,7 +79,7 @@ These hats might look normal at first glance, but they hide a secret. They encou
 :::
 ::::
 
-:::: mini-video
+:::: small-figure-text
 ![alt text firefly video](/assets/work/firefly_island/flowers.mp4)
 ::: group
 #### Go fishing, but catch emoji instead
@@ -87,12 +87,13 @@ What's an island without a fishing game? Here, players can catch thousands of di
 :::
 ::::
 
-#### Even more interactive stuff!
+:::: large-figure-text
 ![alt text firefly video](/assets/work/firefly_island/flowers.mp4)
-
+::: group
+#### Even more interactive stuff!
 With flowers that users can pick and put on each other, a campfire with the ability to roast marshmallows, and a tree that grows and thrives with conversation, the environment in Firefly Island provides users many opportunities to discover elements and explore the environment in an interdependent way.
-
-![alt text firefly video](/assets/work/firefly_island/flowers.mp4 "video caption test")
+:::
+::::
 
 ## The outcome
 

@@ -36,7 +36,8 @@ module.exports = function (eleventyConfig) {
       useImageSyntax: true,
     })
     .use(container, "info")
-    .use(container, "mini-video")
+    .use(container, "small-figure-text")
+    .use(container, "large-figure-text")
     .use(container, "group")
     .use(footnote);
 
