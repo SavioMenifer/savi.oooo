@@ -16,9 +16,9 @@
     "build:css": "npm run css:lint && npm run css:scss && npm run css:autoprefixer",
     "watch:css": "onchange \"src/scss\" -- npm run build:css",
     "watch:images": "onchange \"src/assets\" -- webpack --mode=development",
-    "watch": "set ELEVENTY_ENV=development&& run-p serve watch:*",
-    "build": "set ELEVENTY_ENV=production&& run-p build:*",
-    "build-dev": "set ELEVENTY_ENV=development&& run-p build:*"
+    "watch": "run-p serve watch:*",
+    "build": "run-p build:*",
+    "deploy": "npm run build:css && npm run build:js && npx @11ty/eleventy --pathprefix=savi.oooo"
   },
   "repository": {
     "type": "git",
