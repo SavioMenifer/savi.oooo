@@ -1,4 +1,7 @@
 const posthtml = require("posthtml");
+const Image = require("@11ty/eleventy-img");
+const { parseHTML } = require("linkedom");
+const path = require("path");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addTransform("posthtml", function (content, outputPath) {
@@ -43,6 +46,81 @@ module.exports = function (eleventyConfig) {
     .use(footnote);
 
   eleventyConfig.setLibrary("md", markdownLib);
+
+  // image optimization using eleventy-img
+
+  if (process.env.ELEVENTY_ENV) {
+    const ignoredFormats = [".svg"];
+    const ignoredPages = ["about.html"];
+
+    eleventyConfig.addTransform("transform", (content, outputPath) => {
+      function endsWithAny(suffixes, string) {
+        return suffixes.some(function (suffix) {
+          return string.endsWith(suffix);
+        });
+      }
+
+      if (outputPath && endsWithAny(ignoredPages, outputPath)) return content;
+
+      if (outputPath && outputPath.endsWith(".html")) {
+        let { document } = parseHTML(content);
+
+        const images = [...document.querySelectorAll("img")];
+
+        images.forEach((i, index) => {
+          const src = "./src/" + i.getAttribute("src");
+
+          const { ext } = path.parse(src);
+          const { dir } = path.parse(i.getAttribute("src"));
+          if (ignoredFormats.includes(ext)) {
+            // use fs.copyFile to manually copy this file to your output dir
+            return;
+          }
+
+          const options = {
+            widths: [1600, 1920, null],
+            sizes: "100vw",
+            formats: ["webp", "jpeg"],
+            urlPath: dir,
+            outputDir: "./dist/" + dir,
+            sharpJpegOptions: { quality: 90 },
+            sharpWebpOptions: { quality: 90 },
+            filenameFormat: function (id, src, width, format, options) {
+              const extension = path.extname(src);
+              const name = path.basename(src, extension);
+              return `${name}-${width}w.${format}`;
+            },
+          };
+
+          const meta = Image.statsSync(src, options);
+          const last = meta.jpeg[meta.jpeg.length - 1];
+          if (last.width < 500) return;
+
+          Image(src, options);
+          i.setAttribute("width", last.width);
+          i.setAttribute("height", last.height);
+          if (index !== 0) {
+            i.setAttribute("loading", "lazy");
+            i.setAttribute("decoding", "async");
+          }
+
+          i.outerHTML = `
+          <picture>
+            <source type="image/webp" sizes="${
+              options.sizes
+            }" srcset="${meta.webp.map((p) => p.srcset).join(", ")}">
+            <source type="image/jpeg" sizes="${
+              options.sizes
+            }" srcset="${meta.jpeg.map((p) => p.srcset).join(", ")}">
+            ${i.outerHTML}
+          </picture>`;
+        });
+
+        return `<!DOCTYPE html>${document.documentElement.outerHTML}`;
+      }
+      return content;
+    });
+  }
 
   return {
     dir: {
