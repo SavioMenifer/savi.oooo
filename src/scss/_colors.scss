@@ -9,10 +9,17 @@ body {
   color: $primary-text-color-light;
 }
 
+a.external::after {
+  background-color: $primary-text-color-light;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: $body-bg-color-dark;
     color: $primary-text-color-dark;
+  }
+  a.external::after {
+    background-color: $primary-text-color-dark;
   }
 }
 
