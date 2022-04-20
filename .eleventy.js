@@ -82,7 +82,7 @@ module.exports = function (eleventyConfig) {
             sizes: "100vw",
             formats: ["webp", "jpeg"],
             urlPath: dir,
-            outputDir: "./dist/" + dir,
+            outputDir: "./docs/" + dir,
             sharpJpegOptions: { quality: 90 },
             sharpWebpOptions: { quality: 90 },
             filenameFormat: function (id, src, width, format, options) {
@@ -125,7 +125,7 @@ module.exports = function (eleventyConfig) {
   return {
     dir: {
       input: "src",
-      output: "dist",
+      output: "docs",
       layouts: "views/layouts",
     },
   };

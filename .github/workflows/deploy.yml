@@ -9,16 +9,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Generate static VuePress files
+      - name: Generate static files
         uses: actions/setup-node@v2
         with:
           node-version: "16"
       - run: npm ci
       - run: npm run build
 
-      - name: Init new repo in dist folder and commit generated files
+      - name: Init new repo in docs folder and commit generated files
         run: |
-          cd docs/dist
+          cd docs
           git init
           git add -A
           git config --local user.email "action@github.com"
@@ -31,4 +31,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           force: true
-          directory: ./docs/dist
+          directory: ./docs
