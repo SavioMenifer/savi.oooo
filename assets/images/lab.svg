@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300">
+  <defs>
+    <style>
+      .cls-2 {
+        opacity: 0.36;
+        fill: url(#linear-gradient);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-7 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-8 {
+        fill: url(#linear-gradient-7);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="48.42" y1="145" x2="277.36" y2="145" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d1d3d4" />
+      <stop offset="0.55" stop-color="#6d6e71" />
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="57.74" y1="58" x2="57.74" y2="41.39" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6300eb" />
+      <stop offset="1" stop-color="#7b22f5" />
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="84.54" y1="58" x2="84.54" y2="41.39" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00cc63" />
+      <stop offset="1" stop-color="#2cdb81" />
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="30.95" y1="58" x2="30.95" y2="41.39" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff418c" />
+      <stop offset="1" stop-color="#ff85b5" />
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="57.74" y1="85.83" x2="57.74" y2="69.22" gradientUnits="userSpaceOnUse">
+      <stop offset="0.25" stop-color="#00b4e6" />
+      <stop offset="0.65" stop-color="#00c0f5" />
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="30.95" y1="85.83" x2="30.95" y2="69.22" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e7002a" />
+      <stop offset="0.89" stop-color="#ff214a" />
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="84.87" y1="85.38" x2="84.87" y2="69.21" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fbb040" />
+      <stop offset="1" stop-color="#fbca80" />
+    </linearGradient>
+    <linearGradient id="rainbow-gradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="300" y2="300"
+      gradientTransform="matrix(1 0 0 -1 0 626)">
+      <stop stop-color="#FE9637" offset="0">
+        <animate attributeName="stop-color"
+          values="#FE9637;#FF46D5;#C030C5;#7C52FC;#4085F0;#08B3E5;#1BD7BB;#2AF598;#1BD7BB;#08B3E5;#4085F0;#7C52FC;#C030C5;#FF46D5;#FE9637;#FE9637"
+          dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop stop-color="#FE9637" offset=".1250">
+        <animate attributeName="stop-color"
+          values="#FE9637;#FE9637;#FF46D5;#C030C5;#7C52FC;#4085F0;#08B3E5;#1BD7BB;#2AF598;#1BD7BB;#08B3E5;#4085F0;#7C52FC;#C030C5;#FF46D5;#FE9637"
+          dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop stop-color="#FF46D5" offset=".2500">
+        <animate attributeName="stop-color"
+          values="#FF46D5;#FE9637;#FE9637;#FF46D5;#C030C5;#7C52FC;#4085F0;#08B3E5;#1BD7BB;#2AF598;#1BD7BB;#08B3E5;#4085F0;#7C52FC;#C030C5;#FF46D5"
+          dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop stop-color="#C030C5" offset=".3750">
+        <animate attributeName="stop-color"
+          values="#C030C5;#FF46D5;#FE9637;#FE9637;#FF46D5;#C030C5;#7C52FC;#4085F0;#08B3E5;#1BD7BB;#2AF598;#1BD7BB;#08B3E5;#4085F0;#7C52FC;#C030C5"
+          dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop stop-color="#7C52FC" offset=".5000">
+        <animate attributeName="stop-color"
+          values="#7C52FC;#C030C5;#FF46D5;#FE9637;#FE9637;#FF46D5;#C030C5;#7C52FC;#4085F0;#08B3E5;#1BD7BB;#2AF598;#1BD7BB;#08B3E5;#4085F0;#7C52FC"
+          dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop stop-color="#4085F0" offset=".625">
+        <animate attributeName="stop-color"
+          values="#4085F0;#7C52FC;#C030C5;#FF46D5;#FE9637;#FE9637;#FF46D5;#C030C5;#7C52FC;#4085F0;#08B3E5;#1BD7BB;#2AF598;#1BD7BB;#08B3E5;#4085F0"
+          dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop stop-color="#08B3E5" offset=".750">
+        <animate attributeName="stop-color"
+          values="#08B3E5;#4085F0;#7C52FC;#C030C5;#FF46D5;#FE9637;#FE9637;#FF46D5;#C030C5;#7C52FC;#4085F0;#08B3E5;#1BD7BB;#2AF598;#1BD7BB;#08B3E5"
+          dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop stop-color="#1BD7BB" offset=".875">
+        <animate attributeName="stop-color"
+          values="#1BD7BB;#08B3E5;#4085F0;#7C52FC;#C030C5;#FF46D5;#FE9637;#FE9637;#FF46D5;#C030C5;#7C52FC;#4085F0;#08B3E5;#1BD7BB;#2AF598;#1BD7BB"
+          dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop stop-color="#2AF598" offset="1">
+        <animate attributeName="stop-color"
+          values="#2AF598;#1BD7BB;#08B3E5;#4085F0;#7C52FC;#C030C5;#FF46D5;#FE9637;#FE9637;#FF46D5;#C030C5;#7C52FC;#4085F0;#08B3E5;#1BD7BB;#2AF598"
+          dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+    </linearGradient>
+  </defs>
+  <g id="rainbow">
+    <path fill="url('#rainbow-gradient')"
+      d="M62,234.48A11.75,11.75,0,0,0,72.16,252.1H253.62a11.75,11.75,0,0,0,10.17-17.62l-48.3-83.65a6.08,6.08,0,0,0-5.26-3H115.55a6.07,6.07,0,0,0-5.26,3Z" />
+  </g>
+  <g id="beaker">
+    <path class="cls-2"
+      d="M274.52,231.11,194,91.61V34.26h1a3.39,3.39,0,1,0,0-6.78H131.06a3.39,3.39,0,0,0,0,6.78H132v57L51.26,231.11a20.94,20.94,0,0,0,18.13,31.41h187A20.94,20.94,0,0,0,274.52,231.11Z" />
+    <circle class="cls-3" cx="57.74" cy="49.7" r="8.3" />
+    <circle class="cls-4" cx="84.54" cy="49.7" r="8.3" />
+    <circle class="cls-5" cx="30.95" cy="49.7" r="8.3" />
+    <circle class="cls-6" cx="57.74" cy="77.53" r="8.3" />
+    <circle class="cls-7" cx="30.95" cy="77.53" r="8.3" />
+    <path class="cls-8"
+      d="M82,70.86l-5.51,9.56a3.3,3.3,0,0,0,2.86,5h11a3.31,3.31,0,0,0,2.87-5l-5.52-9.56A3.31,3.31,0,0,0,82,70.86Z" />
+  </g>
+</svg>
