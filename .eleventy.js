@@ -1,23 +1,8 @@
-const posthtml = require("posthtml");
 const Image = require("@11ty/eleventy-img");
 const { parseHTML } = require("linkedom");
 const path = require("path");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addTransform("posthtml", function (content, outputPath) {
-    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if (outputPath && outputPath.endsWith(".html")) {
-      return posthtml([
-        require("posthtml-modules")({
-          root: "./src/views",
-          initial: true,
-        }),
-      ])
-        .process(content)
-        .then((result) => result.html);
-    }
-  });
-
   //markdown-it plugins
   let markdownIt = require("markdown-it");
   let markdownItAttrs = require("markdown-it-attrs");
@@ -127,6 +112,8 @@ module.exports = function (eleventyConfig) {
       input: "src",
       output: "docs",
       layouts: "views/layouts",
+      includes: "views/components",
     },
+    pathPrefix: "/savi.oooo/",
   };
 };

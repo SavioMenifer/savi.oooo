@@ -6,11 +6,11 @@ permalink: index.html
 <html lang="en">
   <head>
     <title>Savio Menifer</title>
-    <module href="/components/head.html"></module>
+    {% include "head.html" %}
   </head>
 
   <body id="work">
-    <module href="/components/header.html"></module>
+    {% include "header.html" %}
 
     <main>
       <div class="intro-svg">
@@ -47,10 +47,9 @@ permalink: index.html
         </div>
         {% endfor %}
       </section>
-      <module href="/components/footer.html"></module>
+      {% include "footer.html" %}
     </main>
-    <module href="/components/contact.html"></module>
 
-    <script src="bundle.js"></script>
+    {% include "contact.html" %} {% include "script.html" %}
   </body>
 </html>

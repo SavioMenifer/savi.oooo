@@ -8,7 +8,7 @@
     "serve": "browser-sync start --server \"docs\" --files \"docs\"",
     "build:js": "webpack --mode=production",
     "watch:js": "onchange \"src/js\" -- webpack --mode=development",
-    "build:html": "set ELEVENTY_ENV=production&& npx @11ty/eleventy",
+    "build:html": "npx @11ty/eleventy",
     "watch:html": "onchange \"src/views\" \"src/posts\" -- npm run build:html",
     "css:scss": "sass --style compressed src/scss/main.scss docs/main.css",
     "css:autoprefixer": "postcss -u autoprefixer -r docs/*.css",
@@ -16,8 +16,9 @@
     "build:css": "npm run css:lint && npm run css:scss && npm run css:autoprefixer",
     "watch:css": "onchange \"src/scss\" -- npm run build:css",
     "watch:images": "onchange \"src/assets\" -- webpack --mode=development",
-    "watch": "run-p serve watch:*",
-    "build": "run-p build:*"
+    "watch": "set ELEVENTY_ENV=development&& run-p serve watch:*",
+    "build": "set ELEVENTY_ENV=production&& run-p build:*",
+    "build-dev": "set ELEVENTY_ENV=development&& run-p build:*"
   },
   "repository": {
     "type": "git",
@@ -34,7 +35,6 @@
     "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-img": "^2.0.0",
     "@babel/preset-env": "^7.16.11",
-    "@interactjs/types": "^1.10.11",
     "autoprefixer": "^10.4.4",
     "babel-loader": "^8.2.3",
     "browser-sync": "^2.27.9",
@@ -52,9 +52,6 @@
     "onchange": "^7.1.0",
     "postcss-cli": "^9.1.0",
     "postcss-scss": "^4.0.3",
-    "posthtml": "^0.16.6",
-    "posthtml-cli": "^0.10.0",
-    "posthtml-modules": "^0.8.0",
     "sass": "^1.49.9",
     "style-loader": "^3.3.1",
     "stylelint": "^14.6.0",

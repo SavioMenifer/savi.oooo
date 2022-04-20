@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>{{ title }} | Savio Menifer</title>
-    <module href="/components/head.html"></module>
+    {% include "head.html" %}
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ page.url }}" />
@@ -19,7 +19,7 @@
   </head>
 
   <body id="work-page">
-    <module href="/components/header.html"></module>
+    {% include "header.html" %}
     <main>
       <article class="page-content work">
         <img class="cover" src="{{ cover.src }}" alt="{{ cover.alt }}" />
@@ -27,10 +27,8 @@
         <div class="subheading">{{ subtitle }}</div>
         {{ content }}
       </article>
-      <module href="/components/footer.html"></module>
+      {% include "footer.html" %}
     </main>
-    <module href="/components/contact.html"></module>
-
-    <script src="bundle.js"></script>
+    {% include "contact.html" %} {% include "script.html" %}
   </body>
 </html>
