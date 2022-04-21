@@ -5,8 +5,10 @@ date: 2020-06-30
 description:
     Lockdowns during the COVID-19 pandemic brought hardship to many people around the world. To some, this meant that they could not physically meet their family and loved ones any more. We challenged ourselves to design a virtual experience that could help people overcome physical barriers and recreate the feeling of being present with another person who was far away. Together, my team and I created a stargazing experience for physically separated couples to experience co-presence and virtual intimacy in VR.
 cover:
-    src: assets/work/firefly_island/thumb.jpg
+    src: assets/work/stargazing/starrysky.jpg
     alt: cover image alt text here
+    blur-color: "#0c1a31"
+    object-position: 60% 80%;
 tags: work
 layout: work
 ---

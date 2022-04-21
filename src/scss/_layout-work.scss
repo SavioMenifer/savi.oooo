@@ -11,6 +11,7 @@
   object-fit: cover;
   height: 30em;
   width: calc(100% + 2em);
+  grid-column: 1 / -1;
 }
 
 .work > .heading {
@@ -127,9 +128,6 @@
 @media (min-width: 40em) {
   .work > figure > * {
     grid-column: 2/12;
-  }
-  .work .cover {
-    grid-column: 1 / -1;
   }
 }
 

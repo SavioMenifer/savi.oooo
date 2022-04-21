@@ -1,12 +1,13 @@
 ---
+title: Savio Menifer
+description: Interaction designer in social VR and shared virtual experiences
 permalink: index.html
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Savio Menifer</title>
-    {% include "head.html" %}
+    {% include "head.html" %} {% include "cardstyle" %}
   </head>
 
   <body id="work">
@@ -27,22 +28,19 @@ permalink: index.html
       <section class="page-content">
         <h2 class="work-list-heading" chat="yolo2">Work</h2>
         {% for work in collections.work reversed %}
-        <div
-          class="work-card"
-          style="background-color: {{ work.data.cover.blur-color }}"
-        >
-          <a href="{{ work.url }}">
-            <img src="assets/images/firefly_island/thumb.jpg"
-          /></a>
+        <div class="work-card">
+          <a href="{{ work.url | url }}">
+            <img
+              src="{{ work.data.cover.src }}"
+              alt="{{ work.data.cover.alt }}"
+            />
+          </a>
           <div class="work-card-text">
-            <a href="{{ work.url }}">
+            <a href="{{ work.url | url }}">
               <h2 class="title">{{ work.data.title }}</h2>
             </a>
             <p>{{ work.data.subtitle }}</p>
-            <span
-              class="blur"
-              style="background-color: {{ work.data.cover.blur-color }}"
-            ></span>
+            <span class="blur"></span>
           </div>
         </div>
         {% endfor %}

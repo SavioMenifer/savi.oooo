@@ -2,3 +2,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <base href="{{ "/" | url }}">
 <link href="main.css" rel="stylesheet" />
+
+<title>{{ title }}</title>
+<meta name="description" content="{{ description}}" />
+
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ page.url }}" />
+<meta property="og:image" content="{{ cover.src }}" />
+<meta property="og:image:alt" content="{{ cover.alt }}" />
+<meta property="og:description" content="{{ description }}" />

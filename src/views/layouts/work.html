@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ title }} | Savio Menifer</title>
-    {% include "head.html" %}
-    <meta property="og:title" content="{{ title }}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="{{ page.url }}" />
-    <meta property="og:image" content="{{ cover.src }}" />
-    <meta property="og:image:alt" content="{{ cover.alt }}" />
-    <meta property="og:description" content="{{ description }}" />
-    {% if color %}
-    <style>
-      .post-color {
-        color: {{ color }};
-      }
-    </style>
-    {% endif %}
+    {% include "head.html" %} {% include "postcolor" %}
   </head>
 
   <body id="work-page">

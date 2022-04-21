@@ -1,0 +1,17 @@
+<style>
+  {% for work in collections.work reversed %}
+    {% if work.data.cover.object-position %}
+    .work-card:nth-of-type({{ forloop.index }}) img {
+      object-position: {{ work.data.cover.object-position }};
+    }
+    {% endif %}
+  {% endfor %}
+  @media (min-width: 40em) {
+    {% for work in collections.work reversed %}
+    .work-card:nth-of-type({{ forloop.index }}),
+    .work-card:nth-of-type({{ forloop.index }}) .blur {
+      background-color: {{ work.data.cover.blur-color }};
+    }
+    {% endfor %}
+  }
+</style>

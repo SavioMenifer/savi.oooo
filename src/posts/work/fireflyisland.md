@@ -5,7 +5,7 @@ date: 2022-01-31
 description:
     Firefly Island is an exploration of how intimacy can be facilitated in social VR. It is a social VR world that features playful, interdependent activities like a hide and seek game with the aim of bringing two people together and helping them connect in VR. The world takes advantage of the unique possibilities in social VR to create an enjoyable, magical experience for users, while providing us insights on how to create better intimate experiences in social VR.
 cover:
-    src: assets/work/firefly_island/thumb.jpg
+    src: assets/work/fireflyisland/thumb.jpg
     alt: cover image alt text here
     blur-color: "#001f26"
 color: "#44a8af"
@@ -31,7 +31,7 @@ Master's thesis
 January 2022
 :::
 
-![alt text photo](assets/work/firefly_island/thumb.jpg){.wide chat="hey this image can speak!!!"}
+![alt text photo](assets/work/fireflyisland/thumb.jpg){.wide chat="hey this image can speak!!!"}
 
 Imagine a stranger coming up to you and patting you softly on your head. It would be bizarre if this happened to you in the real world. However, if you were hanging out in a cute animal avatar on VRChat, a headpat wouldn't be all that strange. In fact, headpats are [quite the norm](https://www.youtube.com/watch?v=glegON06DiQ) in VRChat. Today, platforms such as VRChat and Rec Room are helping people to meet others and engage in new kinds of shared experiences online.
 
@@ -53,11 +53,11 @@ With the theme established, a visual direction was derived for the world. The ma
 
 ::: slider
 
-![alt text photo](assets/work/firefly_island/thumb.jpg)
+![alt text photo](assets/work/fireflyisland/thumb.jpg)
 
-![alt text photo](assets/work/firefly_island/thumb.jpg)
+![alt text photo](assets/work/fireflyisland/thumb.jpg)
 
-![alt text photo](assets/work/firefly_island/thumb.jpg)
+![alt text photo](assets/work/fireflyisland/thumb.jpg)
 
 :::
 
@@ -68,7 +68,7 @@ Firefly Island features multiple activities and interactive elements for users t
 The activities on Firefly Island took inspiration from many sources, which led to some crazy ideas in the end {.larger}
 
 :::: small-figure-text
-![alt text firefly video](assets/work/firefly_island/flowers.mp4)
+![alt text firefly video](assets/work/fireflyisland/flowers.mp4)
 ::: group
 #### Play hide and seek by catching fireflies
 The classic game, but with a twist. Catching fireflies makes the hider go invisible for a short time, while the seeker has to catch fireflies to activate an ability that reveals the hider.
@@ -76,7 +76,7 @@ The classic game, but with a twist. Catching fireflies makes the hider go invisi
 ::::
 
 :::: small-figure-text
-![alt text firefly video](assets/work/firefly_island/flowers.mp4)
+![alt text firefly video](assets/work/fireflyisland/flowers.mp4)
 ::: group
 #### Create a memory jar together
 Taking advantage of the co-creation affordance in VR, this activity allows users to create a personalised firefly jar, and take home the fireflies that they caught in the world.
@@ -84,7 +84,7 @@ Taking advantage of the co-creation affordance in VR, this activity allows users
 ::::
 
 :::: small-figure-text
-![alt text firefly video](assets/work/firefly_island/flowers.mp4)
+![alt text firefly video](assets/work/fireflyisland/flowers.mp4)
 ::: group
 #### Play with magic witch hats
 These hats might look normal at first glance, but they hide a secret. They encourage physical proximity and interactions between users with their magic.
@@ -92,7 +92,7 @@ These hats might look normal at first glance, but they hide a secret. They encou
 ::::
 
 :::: small-figure-text
-![alt text firefly video](assets/work/firefly_island/flowers.mp4)
+![alt text firefly video](assets/work/fireflyisland/flowers.mp4)
 ::: group
 #### Go fishing, but catch emoji instead
 What's an island without a fishing game? Here, players can catch thousands of different emoji in a relaxing fishing game which was designed to facilitate intimacy through self-disclosure and conversation.
@@ -100,7 +100,7 @@ What's an island without a fishing game? Here, players can catch thousands of di
 ::::
 
 :::: large-figure-text
-![alt text firefly video](assets/work/firefly_island/flowers.mp4)
+![alt text firefly video](assets/work/fireflyisland/flowers.mp4)
 ::: group
 #### Even more interactive stuff!
 With flowers that users can pick and put on each other, a campfire with the ability to roast marshmallows, and a tree that grows and thrives with conversation, the environment in Firefly Island provides users many opportunities to discover elements and explore the environment in an interdependent way.
@@ -113,6 +113,6 @@ Firefly Island was designed and evaluated with users in the Neos VR platform ove
 
 Firefly Island is a public world in Neos, where anyone can visit and explore it. It was also featured in the world browser within Neos, and now has over 500 visits. Feel free to give it a try yourself, but remember to take a friend along with you! I'd also be happy to give you a tour of the world; send me an email if you would like that.
 
-Want to learn more? You might be interested in watching this [talk](https://www.youtube.com/watch?v=wc_NvWeluI8) where I presented my master's thesis to the Edu-Science community in Neos. Or download the full thesis as a [PDF](assets/work/firefly_island/thesis.pdf) if you prefer to read :)
+Want to learn more? You might be interested in watching this [talk](https://www.youtube.com/watch?v=wc_NvWeluI8) where I presented my master's thesis to the Edu-Science community in Neos. Or download the full thesis as a [PDF](assets/work/fireflyisland/thesis.pdf) if you prefer to read :)
 
 [^1]: McVeigh-Schultz, J., & Isbister, K. (2021). The Case for “Weird Social” in VR/XR: A Vision of Social Superpowers Beyond Meatspace. <https://doi.org/10.1145/3411763.3450377>
