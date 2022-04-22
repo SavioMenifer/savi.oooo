@@ -8,6 +8,7 @@ import {
   arrow,
   offset,
 } from "@floating-ui/dom";
+import "lite-youtube-embed";
 
 const resistanceFactor = 0.8;
 const reboundFactor = 0.1;

@@ -4,6 +4,7 @@
 @import "colors";
 @import "layout";
 @import "layout-work";
+@import "../../node_modules/lite-youtube-embed/src/lite-yt-embed";
 
 #dragMe {
   cursor: move;
@@ -68,4 +69,8 @@ a.external::after {
   mask-image: url("assets/images/external-arrow.svg");
   height: 0.4em;
   width: 0.4em;
+}
+
+lite-youtube {
+  max-width: unset;
 }

@@ -61,6 +61,7 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
-    "@floating-ui/dom": "^0.4.5"
+    "@floating-ui/dom": "^0.4.5",
+    "lite-youtube-embed": "^0.2.0"
   }
 }

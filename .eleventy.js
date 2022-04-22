@@ -3,6 +3,10 @@ const { parseHTML } = require("linkedom");
 const path = require("path");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addLiquidShortcode("youtube", function (id, title) {
+    return `<lite-youtube videoid="${id}" playlabel="${title}"></lite-youtube>`;
+  });
+
   //markdown-it plugins
   let markdownIt = require("markdown-it");
   let markdownItAttrs = require("markdown-it-attrs");

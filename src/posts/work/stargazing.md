@@ -53,6 +53,8 @@ We designed the enhancements such that the level of intimacy would progressively
 
 The implementation part of the application, which was developed in Unity was a combined effort with the group members. I focused on programming the audio part of the app, which included the voice connection, sound effects, and background music. I also implemented a visual indicator that reacted to the remote participant's voice, which played a role in creating a sense of presence. One of the little details that I added to the project was the soft sound of grass rustling whenever the users moved their heads, which added another hint of co-presence in the virtual space.
 
+{% youtube "rLAg7IPbOEs" "The Stargazing Experience" %}
+
 ## Taking it further
 
 In late 2020, we submitted our experience to the [VPRO Tegenlicht Pionier 2020](https://dezwijger.nl/programma/touching-technology) contest by Dutch television channel VPRO which had the theme of *Touching Technology*, where they looked for innovations using technology that can help us feel connected with others. Our stargazing experience made it to the list of finalists, and was featured in an [article](https://www.vpro.nl/programmas/tegenlicht/lees/artikelen/2021/intimiteit-tech.html) (in Dutch) about intimate technology. The app also made a short appearance in a documentary about combating loneliness in the modern age, which was aired on VPRO.
