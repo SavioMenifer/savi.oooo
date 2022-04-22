@@ -8,7 +8,7 @@
 
 <meta property="og:title" content="{{ title }}" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="{{ page.url }}" />
-<meta property="og:image" content="{{ cover.src }}" />
+<meta property="og:url" content="{{ "https://savi.ooo" | append: page.url | url}}" />
+<meta property="og:image" content="{{ "https://savi.ooo" | append: "/" | url | append: cover.src }}"/>
 <meta property="og:image:alt" content="{{ cover.alt }}" />
 <meta property="og:description" content="{{ description }}" />
