@@ -8,12 +8,13 @@ cover:
     src: assets/work/fireflyisland/thumb.jpg
     alt: cover image alt text here
     blur-color: "#001f26"
+    video: assets/work/fireflyisland/flowers.mp4
 color: "#44a8af"
 tags: work
 layout: work
 ---
 
-Firefly Island is an exploration of how intimacy can be facilitated in social VR. It is a social VR world that features playful, interdependent activities like a hide and seek game with the aim of bringing two people together and helping them connect in VR. The world takes advantage of the unique possibilities in social VR to create an enjoyable, magical experience for users, while providing us insights on how to create better intimate experiences in social VR. {.intro .larger}
+Firefly Island is an exploration of how intimacy can be facilitated in social VR. It is a social VR world that features playful, interdependent activities like a hide and seek game, with the aim of bringing two people together and helping them connect in VR. The world takes advantage of the unique possibilities in social VR to create an enjoyable, magical experience for users, while providing us insights on how to create better intimate experiences in social VR. {.intro .larger}
 
 ::: info
 ###### Type
@@ -45,6 +46,8 @@ These unique interaction possibilities, or *affordances* of social VR can almost
 
 While intimacy can be a complex concept, it was useful to focus on the different themes that constitute intimacy, such as *reciprocity*, *self-disclosure*, and *trust*. In addition, the focus was on a broad conceptualisation of interpersonal intimacy, which included closeness between family, friends, or even strangers.
 
+![intimacy themes alt text](assets/work/fireflyisland/intimacythemes.svg "Intimacy themes"){.contained .shrink}
+
 ## A magical world of fireflies
 
 Different ideas were explored during the design stage of the world, but the central theme that brought the world together was that of *fireflies*. The idea was to create a living, breathing environment that users could interact with. Fireflies had the potential to evoke nostalgia and childhood memories, and spark feelings of joy and wonder within people visiting the island.
@@ -53,11 +56,11 @@ With the theme established, a visual direction was derived for the world. The ma
 
 ::: slider
 
-![alt text photo](assets/work/fireflyisland/thumb.jpg)
+![alt text photo](assets/work/fireflyisland/campfire.jpg)
 
-![alt text photo](assets/work/fireflyisland/thumb.jpg)
+![alt text photo](assets/work/fireflyisland/fireflies.jpg)
 
-![alt text photo](assets/work/fireflyisland/thumb.jpg)
+![alt text photo](assets/work/fireflyisland/hideandseek.jpg)
 
 :::
 
@@ -110,6 +113,8 @@ With flowers that users can pick and put on each other, a campfire with the abil
 ## The outcome
 
 Firefly Island was designed and evaluated with users in the Neos VR platform over two design iterations. During the evaluations, users were able to freely explore the world as a pair, after which they shared their experience through an interview and video recording. This provided us qualitative insights on how users made use of social VR affordances in the world. In addition, we also obtained useful design knowledge that can be appropriated by designers and researchers to create future intimate experiences in social VR.
+
+![alt text photo](assets/work/fireflyisland/marshmallows.jpg){.wide}
 
 Firefly Island is a public world in Neos, where anyone can visit and explore it. It was also featured in the world browser within Neos, and now has over 500 visits. Feel free to give it a try yourself, but remember to take a friend along with you! I'd also be happy to give you a tour of the world; send me an email if you would like that.
 

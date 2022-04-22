@@ -66,6 +66,11 @@
   height: auto;
 }
 
+.work figure figcaption {
+  font-style: italic;
+  margin-top: 1.5em;
+}
+
 .work > figure > :last-child {
   margin-bottom: 2em;
 }
@@ -75,6 +80,14 @@
   margin-left: -1em;
   margin-right: -1em;
   width: calc(100% + 2em);
+}
+
+.work > figure.shrink img {
+  max-width: 30em;
+  justify-self: center;
+}
+.work > figure.shrink figcaption {
+  text-align: center;
 }
 
 .work > .small-figure-text,
@@ -173,7 +186,7 @@
     display: unset;
     grid-column: 4 / 8;
   }
-  .work > .small-figure-text:nth-child(odd) {
+  .work > .small-figure-text:nth-of-type(odd) {
     grid-column: 8 / 12;
   }
   .work > .small-figure-text > figure {
@@ -195,5 +208,8 @@
   }
   .work > .slider {
     grid-column: 4 / 12;
+  }
+  .work > figure.contained * {
+    grid-column: 4 / 10;
   }
 }
