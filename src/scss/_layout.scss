@@ -156,7 +156,8 @@ address > *:not(:last-child) {
     width: 50%;
     z-index: 0;
   }
-  .work-card-text .blur {
+  .work-card-text::after {
+    content: " ";
     position: absolute;
     top: 0;
     height: 100%;

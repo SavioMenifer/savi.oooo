@@ -9,7 +9,7 @@
   @media (min-width: 40em) {
     {% for work in collections.work reversed %}
     .work-card:nth-of-type({{ forloop.index }}),
-    .work-card:nth-of-type({{ forloop.index }}) .blur {
+    .work-card:nth-of-type({{ forloop.index }}) .work-card-text::after {
       background-color: {{ work.data.cover.blur-color }};
     }
     {% endfor %}
