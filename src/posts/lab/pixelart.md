@@ -5,7 +5,7 @@ date: 2022-01-13
 description:
     I enjoy creating pixel art, and I'm always trying to learn and improve my technique. Here is everything I have made so far.
 tags: lab
-layout: work
+layout: lab
 ---
 
 I enjoy creating pixel art, and I'm always trying to learn and improve my technique. Here is everything I have made so far. {.intro .larger}

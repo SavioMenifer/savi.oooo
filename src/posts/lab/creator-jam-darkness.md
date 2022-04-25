@@ -8,7 +8,7 @@ cover:
     src: assets/lab/creator-jam-darkness/cover.jpg
     alt: A dark subway tunnel with a subway car glowing in neon colours, and glowing rocks embedded in the wall.
 tags: lab
-layout: work
+layout: lab
 ---
 
 Creator Jam (CJ) is a weekly event in Neos VR, where people come together to build something based on a theme. For this edition, the theme was to fill a dark world with light. Together, me and my friend Obsidian created this subway tunnel inspired by K/DA's POP/STARS [music video](https://www.youtube.com/watch?v=UOxkGD8qRB4). We had a lot of fun creating this world, and we even made it such that other users can add their own graffiti art inside the subway car. {.intro .larger}
