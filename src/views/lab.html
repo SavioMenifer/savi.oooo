@@ -25,15 +25,14 @@ headertext: Making and breaking stuff!
         </p>
       </section>
       <section class="page-content">
-        <div class="about-tile">
-          <h3>Lorem ipsum</h3>
-          <p>
-            Lorem Ipsum is the single greatest threat. We are not - we are not
-            keeping up with other websites. Lorem Ipsum best not make any more
-            threats to your website. Yes, this is my experiment with lorem
-            ipsum, for now lol
-          </p>
+        {% for labitem in collections.lab reversed %}
+        <div class="lab-item">
+          <a href="{{ labitem.url | url }}">
+            <h2 class="title">{{ labitem.data.title }}</h2>
+          </a>
+          <p>{{ labitem.data.subtitle }}</p>
         </div>
+        {% endfor %}
       </section>
       {% include "footer.html" %}
     </main>

@@ -1,0 +1,3 @@
+{
+  "permalink": "/lab/{{ page.fileSlug }}.html"
+}

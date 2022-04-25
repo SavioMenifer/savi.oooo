@@ -9,7 +9,7 @@
 .work .cover {
   margin: 0 -1em;
   object-fit: cover;
-  height: 30em;
+  height: 20em;
   width: calc(100% + 2em);
   grid-column: 1 / -1;
 }
@@ -69,7 +69,7 @@
 
 .work figure figcaption {
   font-style: italic;
-  margin-top: 1.5em;
+  margin-top: 1em;
 }
 
 .work > figure > :last-child {
@@ -126,7 +126,7 @@
 }
 
 .work > .slider > figure img {
-  width: 65vw;
+  width: 80vw;
   border-radius: $work-page-border-radius;
 }
 
@@ -153,6 +153,9 @@ lite-youtube {
   }
   .work > figure.wide img {
     border-radius: $work-page-border-radius;
+  }
+  .work > .cover {
+    height: 30em;
   }
 }
 

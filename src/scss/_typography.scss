@@ -37,11 +37,13 @@ nav a:hover {
 #work nav .work-link,
 #work-page nav .work-link,
 #about nav .about-link,
-#lab nav .lab-link {
+#lab nav .lab-link,
+#lab-page nav .lab-link {
   font-weight: bold;
   opacity: 1;
 }
 
-.work-card-text a {
+.work-card-text a,
+.lab-item a {
   text-decoration: none;
 }

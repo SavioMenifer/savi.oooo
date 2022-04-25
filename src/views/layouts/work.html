@@ -4,11 +4,11 @@
     {% include "head.html" %} {% include "postcolor" %}
   </head>
 
-  <body id="work-page">
+  <body id="{{ tags }}-page">
     {% include "header.html" %}
     <main>
       <article class="page-content work">
-        {% if cover.video %}
+        {% if cover and cover.video %}
         <video autoplay muted loop class="cover">
           <source type="video/mp4" src="{{ cover.video }}" />
           Your browser does not support playing HTML5 video. You can
@@ -17,7 +17,7 @@
           >
           instead. Here is a description of the content: alt text firefly video
         </video>
-        {% else %}
+        {% elsif cover %}
         <img class="cover" src="{{ cover.src }}" alt="{{ cover.alt }}" />
         {% endif %}
         <h1 class="heading">{{ title }}</h1>
