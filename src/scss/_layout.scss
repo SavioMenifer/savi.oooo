@@ -128,6 +128,9 @@ address {
   transform: scale(0.75);
   max-width: 100%;
 }
+address {
+  font-size: 1.1em;
+}
 address > *:not(:last-child) {
   margin-right: 0.3em;
 }
@@ -245,6 +248,7 @@ address > *:not(:last-child) {
   address {
     bottom: 2em;
     grid-row: 3;
+    font-size: unset;
   }
   address .email {
     display: block;

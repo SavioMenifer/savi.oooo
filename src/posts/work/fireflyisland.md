@@ -120,8 +120,8 @@ Firefly Island was designed and evaluated with users in the Neos VR platform ove
 
 ![alt text photo](assets/work/fireflyisland/selfie.jpg){.wide}
 
-Firefly Island is a public world in Neos, where anyone can visit and explore it. It was also featured in the world browser within Neos, and now has over 500 visits. Feel free to give it a try yourself, but remember to take a friend along with you! I'd also be happy to give you a tour of the world; send me an email if you would like that.
+Firefly Island is a public world in Neos, where anyone can visit and explore it. It was also featured in the world browser within Neos, and now has over 500 visits. Feel free to give it a try yourself, but remember to take a friend along with you! I'd also be happy to give you a tour of the world; send me an [email](mailto:hello@savi.ooo) if you would like that.
 
-Want to learn more? You might be interested in watching this [talk](https://www.youtube.com/watch?v=wc_NvWeluI8) where I presented my master's thesis to the Edu-Science community in Neos. Or download the full thesis as a [PDF](assets/work/fireflyisland/thesis.pdf) if you prefer to read :)
+Want to learn more? You might be interested in watching this [talk](https://www.youtube.com/watch?v=wc_NvWeluI8) where I presented my master's thesis to the Edu-Science community in Neos. You can also download the full thesis as a [PDF](assets/work/fireflyisland/firefly_island_thesis.pdf).
 
-[^1]: McVeigh-Schultz, J., & Isbister, K. (2021). The Case for “Weird Social” in VR/XR: A Vision of Social Superpowers Beyond Meatspace. <https://doi.org/10.1145/3411763.3450377>
+[^1]: McVeigh-Schultz, J., & Isbister, K. (2021). The Case for “Weird Social” in VR/XR: A Vision of Social Superpowers Beyond Meatspace. [DOI](https://doi.org/10.1145/3411763.3450377)

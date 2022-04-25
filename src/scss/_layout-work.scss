@@ -1,4 +1,5 @@
-#work-page .header-name {
+#work-page .header-name,
+#lab-page .header-name {
   display: none;
 }
 
@@ -160,7 +161,8 @@ lite-youtube {
 }
 
 @media (min-width: 60em) {
-  #work-page .header-name {
+  #work-page .header-name,
+  #lab-page .header-name {
     display: unset;
   }
   .work > figure > * {
