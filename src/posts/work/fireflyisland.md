@@ -68,7 +68,7 @@ With the theme established, a visual direction was derived for the world. The ma
 
 Firefly Island features multiple activities and interactive elements for users to explore and discover. Activities were designed keeping in mind the values of *simplicity* and *replayability*, aiming for an enjoyable experience that users could keep coming back to. Another design value that was forefronted was that of *expressiveness*, which ensured that users were able to adapt the activity in their own way and derive their own enjoyment out of it.
 
-The activities on Firefly Island took inspiration from many sources, which led to some crazy ideas in the end {.larger}
+While designing the activities on Firefly Island, I took inspiration from various sources including the natural, and digital world. This led to some truly unique ideas. {.larger}
 
 :::: small-figure-text
 ![Two people on Firefly Island catching firefly island catching fireflies with a magic bug catcher, and later playing hide and seek by catching fireflies.](assets/work/fireflyisland/hideandseek.mp4)
