@@ -16,6 +16,28 @@
   position: absolute;
 }
 
+#dragMe::after {
+  content: " ";
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1em;
+  margin-left: 0.6em;
+  background-image: url("assets/images/eye.svg");
+  height: 0.5em;
+  width: 0.5em;
+}
+
+#dragMe::before {
+  content: " ";
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1em;
+  margin-left: 0.7em;
+  background-image: url("assets/images/eye.svg");
+  height: 0.5em;
+  width: 0.5em;
+}
+
 #container {
   position: absolute;
 }
@@ -26,15 +48,18 @@
 }
 
 .tooltip {
-  background-color: aquamarine;
+  background-color: #252426;
   transition: transform 0.2s ease, opacity 0.1s ease;
   transform: scale(0, 0);
   opacity: 0;
+  color: $secondary-text-color-dark;
+  font-style: italic;
+  border-radius: 0.5em;
 }
 
 #arrow {
   position: absolute;
-  background: aquamarine;
+  background: #252426;
   width: 8px;
   height: 8px;
   transform: rotate(45deg);

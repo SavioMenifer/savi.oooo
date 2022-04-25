@@ -1,12 +1,23 @@
 $body-bg-color-light: #f3f3f3;
 $primary-text-color-light: #333;
+$secondary-text-color-light: #24292f;
 
 $body-bg-color-dark: #15141a;
-$primary-text-color-dark: #fbfbfe;
+$primary-text-color-dark: #abb6bf;
+$secondary-text-color-dark: #dae0e6;
 
 body {
   background-color: $body-bg-color-light;
   color: $primary-text-color-light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $secondary-text-color-light;
 }
 
 a.external::after {
@@ -18,13 +29,22 @@ a.external::after {
     background-color: $body-bg-color-dark;
     color: $primary-text-color-dark;
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $secondary-text-color-dark;
+  }
   a.external::after {
     background-color: $primary-text-color-dark;
   }
 }
 
 @media (min-width: 40em) {
-  .work-card-text {
-    color: $primary-text-color-dark;
+  .work-card-text h2,
+  .work-card-text p {
+    color: $secondary-text-color-dark;
   }
 }

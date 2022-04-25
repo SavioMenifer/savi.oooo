@@ -113,6 +113,7 @@ address {
 .intro-svg {
   grid-column: 8 / 13;
   position: relative;
+  transform: translateY(-2em);
 }
 
 .intro-svg img {
@@ -225,6 +226,7 @@ address > *:not(:last-child) {
     grid-column: 9 / 12;
     grid-row: 1 / 4;
     margin-top: 2em;
+    transform: unset;
   }
   .page-intro {
     grid-column: 4 / 9;
@@ -234,7 +236,7 @@ address > *:not(:last-child) {
     grid-column: 4 / 8;
     padding-right: 2em;
   }
-  .about-tile:nth-child(odd) {
+  .about-tile:nth-of-type(even) {
     grid-column: 8 / 12;
   }
   .work-card-text {
@@ -264,7 +266,7 @@ address > *:not(:last-child) {
   .about-tile {
     grid-column: 4 / 7;
   }
-  .about-tile:nth-child(odd) {
+  .about-tile:nth-of-type(even) {
     grid-column: 7 / 10;
   }
 }

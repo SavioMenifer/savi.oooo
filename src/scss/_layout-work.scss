@@ -63,6 +63,7 @@
 }
 
 .work figure img {
+  width: 100%;
   height: auto;
 }
 
@@ -80,6 +81,10 @@
   margin-left: -1em;
   margin-right: -1em;
   width: calc(100% + 2em);
+}
+
+.work > figure.contained img {
+  border-radius: $work-page-border-radius;
 }
 
 .work > figure.shrink img {
@@ -114,7 +119,6 @@
   display: flex;
   overflow-x: scroll;
   cursor: grab;
-  border-radius: $work-page-border-radius;
 }
 
 .work > .slider > figure {
@@ -122,12 +126,17 @@
 }
 
 .work > .slider > figure img {
-  width: calc(50vw);
+  width: 65vw;
   border-radius: $work-page-border-radius;
 }
 
 .work > .slider > figure:not(:last-child) img {
-  margin-right: 2em;
+  margin-right: 1em;
+}
+
+.work figure video,
+lite-youtube {
+  border-radius: $work-page-border-radius;
 }
 
 .work > .footnotes {
@@ -142,6 +151,9 @@
   .work > figure > * {
     grid-column: 2/12;
   }
+  .work > figure.wide img {
+    border-radius: $work-page-border-radius;
+  }
 }
 
 @media (min-width: 60em) {
@@ -153,14 +165,10 @@
   }
   .work > figure.wide img {
     grid-column: 4 / 12;
-    border-radius: $work-page-border-radius;
   }
   .work .cover {
     grid-column: 4 / 12;
     border-radius: 0 0 $work-page-border-radius $work-page-border-radius;
-  }
-  .work video {
-    border-radius: $work-page-border-radius;
   }
   .work > .small-figure-text {
     display: contents;
@@ -172,6 +180,12 @@
   }
   .work > .small-figure-text > .group {
     grid-column: 9 / 12;
+  }
+  .work > .slider > figure img {
+    width: 50vw;
+  }
+  .work > .slider > figure:not(:last-child) img {
+    margin-right: 1.5em;
   }
 }
 

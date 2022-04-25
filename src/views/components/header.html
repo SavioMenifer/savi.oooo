@@ -22,6 +22,10 @@
 
   <div class="header-name secondary-column">
     <h2>Savio Menifer</h2>
-    <span>Interaction Designer</span>
+    {% if headertext %}
+    <span> {{ headertext }} </span>
+    {% else %}
+    <span> Creating future experiences </span>
+    {% endif %}
   </div>
 </header>

@@ -33,7 +33,10 @@ module.exports = {
   plugins: [
     new ESLintPlugin(),
     new CopyPlugin({
-      patterns: [{ from: "./src/assets", to: "./assets" }],
+      patterns: [
+        { from: "./src/assets", to: "./assets" },
+        { from: "./src/assets/images/favicon.ico", to: "./favicon.ico" },
+      ],
     }),
   ],
 };
