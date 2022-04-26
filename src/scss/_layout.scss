@@ -26,7 +26,7 @@ main {
 }
 
 .page-intro {
-  grid-column: span 10;
+  grid-column: span 11;
 }
 
 .page-intro p {
@@ -45,6 +45,7 @@ header {
 
 .mii {
   margin-right: 1em;
+  font-size: 0.9em;
 }
 
 nav {
@@ -147,7 +148,7 @@ address > *:not(:last-child) {
     grid-column: 8 / 12;
   }
   .page-intro {
-    grid-column: 2 / 8;
+    grid-column: 2 / 9;
   }
   .work-card {
     height: 25em;
@@ -218,6 +219,7 @@ address > *:not(:last-child) {
   .mii {
     margin-bottom: 2em;
     order: 1;
+    font-size: unset;
   }
   .header-name {
     grid-row: 1;
