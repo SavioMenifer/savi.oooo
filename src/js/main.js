@@ -110,12 +110,10 @@ function onEnd() {
       requestAnimationFrame(onEnd);
 }
 
-/*
 inertiaDrag.addEventListener("dragmove", onMove);
 inertiaDrag.addEventListener("inertiamove", onMove);
 inertiaDrag.addEventListener("dragend", onEnd);
 inertiaDrag.addEventListener("inertiaend", onEnd);
-*/
 
 // Tooltip implementation
 
