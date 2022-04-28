@@ -36,14 +36,14 @@ permalink: index.html
         <h2 class="work-list-heading" chat="yolo2">Work</h2>
         {% for work in collections.work reversed %}
         <div class="work-card">
-          <a href="{{ work.filePathStem | url }}">
+          <a href="{{ work.url | url | removeHTML }}">
             <img
               src="{{ work.data.cover.src }}"
               alt="{{ work.data.cover.alt }}"
             />
           </a>
           <div class="work-card-text">
-            <a href="{{ work.filePathStem | url }}">
+            <a href="{{ work.url | url | removeHTML |}}">
               <h2 class="title">{{ work.data.title }}</h2>
             </a>
             <p>{{ work.data.subtitle }}</p>

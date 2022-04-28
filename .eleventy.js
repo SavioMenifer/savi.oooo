@@ -120,6 +120,10 @@ module.exports = function (eleventyConfig) {
     ],
   });
 
+  eleventyConfig.addFilter("removeHTML", function (value) {
+    return value.replace(/\.html$/, "");
+  });
+
   return {
     dir: {
       input: "src",

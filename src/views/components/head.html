@@ -9,7 +9,7 @@
 
 <meta property="og:title" content="{{ title }}" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="{{ "https://savi.ooo" | append: page.filePathStem | url}}" />
+<meta property="og:url" content="{{ "https://savi.ooo" | append: page.url | url | removeHTML }}" />
 {% if cover %}
 <meta property="og:image" content="{{ "https://savi.ooo" | append: "/" | url | append: cover.src }}"/>
 <meta property="og:image:alt" content="{{ cover.alt }}" />
