@@ -29,6 +29,7 @@
   font-size: 1.3em;
   line-height: 1.4em;
   margin-top: 1em;
+  margin-bottom: 1.5em;
 }
 
 .work > .intro {
@@ -77,6 +78,10 @@
   margin-bottom: 2em;
 }
 
+.work > figure > :first-child {
+  margin-top: 1.5em;
+}
+
 .work > figure.wide img {
   grid-column: 1 / -1;
   margin-left: -1em;
@@ -120,6 +125,8 @@
   display: flex;
   overflow-x: scroll;
   cursor: grab;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 }
 
 .work > .slider > figure {
