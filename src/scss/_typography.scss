@@ -1,3 +1,5 @@
+@import "colors";
+
 body {
   font-family: "Basic Sans Narrow", sans-serif;
 }
@@ -43,7 +45,22 @@ nav a:hover {
   opacity: 1;
 }
 
-.work-card-text a,
-.lab-item a {
+.work-card-text a {
   text-decoration: none;
+}
+
+.lab-item a {
+  text-decoration-thickness: 0.1em;
+}
+
+.work strong {
+  color: $secondary-text-color-light;
+  font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+  .work strong {
+    color: $secondary-text-color-dark;
+    font-weight: normal;
+  }
 }
