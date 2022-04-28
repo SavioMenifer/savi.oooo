@@ -1,6 +1,9 @@
 ---
-title: Savio Menifer
-description: Interaction designer in social VR and shared virtual experiences
+title: Savio Menifer - Interaction Designer
+description: Interaction designer in social VR and shared virtual experiences - Portfolio
+cover:
+  src: assets/work/fireflyisland/thumb.jpg
+  alt: Two people with animal-like avatars sitting at the end of a dock on a social VR world.
 permalink: index.html
 ---
 
@@ -33,14 +36,14 @@ permalink: index.html
         <h2 class="work-list-heading" chat="yolo2">Work</h2>
         {% for work in collections.work reversed %}
         <div class="work-card">
-          <a href="{{ work.url | url }}">
+          <a href="{{ work.filePathStem | url }}">
             <img
               src="{{ work.data.cover.src }}"
               alt="{{ work.data.cover.alt }}"
             />
           </a>
           <div class="work-card-text">
-            <a href="{{ work.url | url }}">
+            <a href="{{ work.filePathStem | url }}">
               <h2 class="title">{{ work.data.title }}</h2>
             </a>
             <p>{{ work.data.subtitle }}</p>

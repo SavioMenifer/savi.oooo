@@ -109,6 +109,17 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.setBrowserSyncConfig({
+    middleware: [
+      function (req, res, next) {
+        if (/^[^.]+$/.test(req.url)) {
+          res.setHeader("Content-Type", "text/html; charset=utf-8");
+        }
+        next();
+      },
+    ],
+  });
+
   return {
     dir: {
       input: "src",

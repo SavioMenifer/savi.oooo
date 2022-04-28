@@ -27,7 +27,7 @@ headertext: Making and breaking stuff!
       <section class="page-content">
         {% for labitem in collections.lab reversed %}
         <div class="lab-item">
-          <a href="{{ labitem.url | url }}">
+          <a href="{{ labitem.filePathStem | url }}">
             <h2 class="title">{{ labitem.data.title }}</h2>
           </a>
           <p>{{ labitem.data.subtitle }}</p>
