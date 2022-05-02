@@ -35,6 +35,11 @@ nav a:hover {
   opacity: $nav-link-hover-opacity;
 }
 
+address a:hover,
+.lab-item a:hover {
+  opacity: 0.6;
+}
+
 // highlight current page in nav menu
 #work nav .work-link,
 #work-page nav .work-link,

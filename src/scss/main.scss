@@ -78,3 +78,11 @@ a.external::after {
 lite-youtube {
   max-width: unset;
 }
+
+.work-card img {
+  transition: filter 0.2s ease;
+}
+
+.work-card:hover img {
+  filter: brightness(75%);
+}
