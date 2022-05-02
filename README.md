@@ -1,4 +1,4 @@
-# savi.ooo
+# [savi.ooo](https://savi.ooo/)
 
 This is the 2022 version of my personal portfolio website. This is a passion project, and I build it from scratch. I also took my time in creating it :D
 
