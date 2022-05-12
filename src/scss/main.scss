@@ -12,8 +12,16 @@
   width: 3em;
   height: 3em;
   position: absolute;
+}
+
+#dragMe .drawables {
   background-image: url("assets/images/mii-light.png");
   background-size: 100%;
+  display: flex;
+  justify-content: center;
+  width: 3em;
+  height: 3em;
+  transition: transform ease 0.1s;
 }
 
 #container {
@@ -21,7 +29,7 @@
 }
 
 .tooltip-container {
-  width: 100px;
+  width: 16em;
   position: absolute;
 }
 
@@ -33,6 +41,8 @@
   color: $secondary-text-color-dark;
   font-style: italic;
   border-radius: 0.5em;
+  padding: 0.6em;
+  margin: 0em 0.4em 0.4em 0.4em;
 }
 
 #arrow {
@@ -54,6 +64,32 @@
 
 .mii {
   z-index: 99;
+}
+
+.eye {
+  float: left;
+  width: 1em;
+  height: 1em;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.65em;
+  overflow: hidden;
+  clip-path: ellipse(50% 0% at center);
+  transition: clip-path ease 0.1s;
+}
+
+.eye:first-of-type {
+  margin-right: 0.1em;
+}
+
+.eyeball {
+  border-radius: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: black;
+  transform-origin: bottom;
+  transition: transform ease 0.1s;
 }
 
 .intro-svg {
