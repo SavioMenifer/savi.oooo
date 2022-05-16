@@ -129,6 +129,14 @@ address {
   transform: scale(0.75);
   max-width: 100%;
 }
+
+.about-tile {
+  margin: 0 -1em 1em -1em;
+  padding: 0em 1em 0 1em;
+}
+.about-heading {
+  margin-bottom: 1em;
+}
 address {
   font-size: 1.1em;
 }
@@ -174,6 +182,9 @@ address > *:not(:last-child) {
     margin: 0 -1em;
     height: 100%;
     width: calc(100% + 2em);
+  }
+  .about-tile {
+    border-radius: 0.75em;
   }
 }
 
@@ -239,10 +250,16 @@ address > *:not(:last-child) {
   }
   .about-tile {
     grid-column: 4 / 8;
-    padding-right: 2em;
+    margin: 0 1em 1em -1em;
+    padding: 0em 2em 0 1em;
   }
   .about-tile:nth-of-type(even) {
     grid-column: 8 / 12;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .about-tile p {
+    margin-bottom: 1em;
   }
   .work-card-text {
     width: 40%;

@@ -1,5 +1,5 @@
 $body-bg-color-light: #f3f3f3;
-$primary-text-color-light: #333;
+$primary-text-color-light: #454c57;
 $secondary-text-color-light: #24292f;
 
 $body-bg-color-dark: #15141a;
@@ -46,5 +46,17 @@ a.external::after {
   .work-card-text h2,
   .work-card-text p {
     color: $body-bg-color-light;
+  }
+}
+
+$tile-colors: #51b1ca #58ae8f #ddac46 #a14998 #b43956 #358f8f #1773b8 #dda77b;
+
+@for $i from 1 through 8 {
+  .about-tile.tile#{$i} {
+    background: linear-gradient(
+      180deg,
+      rgba(nth($tile-colors, $i), 0.06) 10%,
+      rgba(nth($tile-colors, $i), 0.13) 100%
+    );
   }
 }
