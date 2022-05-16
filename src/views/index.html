@@ -24,16 +24,16 @@ permalink: index.html
           chat="What are these flowers doing here anyway? Well you see, this is my little internet garden :D"
         />
       </div>
-      <section class="page-intro" chat="yolo bro">
+      <section class="page-intro">
         <p>
-          Hi, I'm Savio. My work is driven by the possibilities of interactive
-          technology, with a focus on shaping the future using technology to
-          bring positive change. I am passionate about emerging mediums
-          including social VR and shared virtual experiences.
+          Hi, I'm Savio. I am passionate about creating experiences that empower
+          us to connect in new ways. I am driven by the possibilities of
+          emerging mediums including social VR and shared virtual experiences,
+          with a focus on shaping the ‘virtual future’ in a positive way.
         </p>
       </section>
       <section class="page-content">
-        <h2 class="work-list-heading" chat="yolo2">Work</h2>
+        <h2 class="work-list-heading">Work</h2>
         {% for work in collections.work reversed %}
         <div class="work-card">
           <a href="{{ work.url | url | removeHTML }}">
