@@ -14,7 +14,7 @@ tags: work
 layout: work
 ---
 
-Lockdowns during the COVID-19 pandemic brought hardship to many people around the world. To some, this meant that they could not physically meet their family and loved ones any more. We challenged ourselves to design a virtual experience that could help people overcome physical barriers and recreate the **feeling of being present with another person** who was far away. Together, my team and I created a stargazing experience for physically separated couples to experience co-presence and virtual intimacy in VR. {.intro .larger}
+Lockdowns during the COVID-19 pandemic brought hardship to many people around the world. To some, this meant that they could not physically meet their family and loved ones any more. We challenged ourselves to design a virtual experience that could help people overcome physical barriers and recreate the feeling of being present with another person who was far away. Together, my team and I created a stargazing experience for physically separated couples to experience co-presence and virtual intimacy in VR. {.intro .larger}
 
 ::: info
 ###### Type

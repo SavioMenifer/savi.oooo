@@ -3,7 +3,7 @@ title: Firefly Island
 subtitle: A social VR world designed for intimacy and close connection in VR
 date: 2022-01-31
 description:
-    Firefly Island is an exploration of how intimacy can be facilitated in social VR. It is a social VR world that features playful, interdependent activities like a hide and seek game with the aim of bringing two people together and helping them connect in VR. The world takes advantage of the unique possibilities in social VR to create an enjoyable, magical experience for users, while providing us insights on how to create better intimate experiences in social VR.
+    Firefly Island is an exploration of how social VR can be an intimate medium. It is a social VR world that features playful, interdependent activities like a hide and seek game with the aim of bringing two people together and helping them connect in VR. The world takes advantage of the unique possibilities in social VR to create an enjoyable, magical experience for users, while providing us insights on how to create better intimate experiences in social VR.
 cover:
     src: assets/work/fireflyisland/thumb.jpg
     alt: Two people with animal-like avatars sitting at the end of the dock on Firefly Island.
@@ -14,7 +14,7 @@ tags: work
 layout: work
 ---
 
-Firefly Island is an exploration of how intimacy can be facilitated in social VR. It is a social VR world that features **playful, interdependent activities** like a hide and seek game, with the aim of bringing two people together and helping them connect in VR. The world takes advantage of the **unique possibilities in social VR** to create an enjoyable, magical experience for users, while providing insights on how to create better intimate experiences in social VR. {.intro .larger}
+Firefly Island is an exploration of how social VR can be an intimate medium. It is a social VR world that features playful, interdependent activities like a hide and seek game, with the aim of bringing two people together and helping them connect in VR. The world takes advantage of the unique possibilities in social VR to create an enjoyable, magical experience for users, while providing insights on how to create better intimate experiences in social VR. {.intro .larger}
 
 ::: info
 ###### Type
