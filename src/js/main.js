@@ -291,7 +291,7 @@ const miiPointerProximity = function (e) {
     }
   } else {
     if (snapped) closeEyes();
-    else resetEyes();
+    else if (eye_state === "open") resetEyes();
   }
 };
 
