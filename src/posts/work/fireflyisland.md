@@ -117,7 +117,7 @@ Firefly Island was designed and evaluated with users in the Neos VR platform ove
 Some of the interesting findings were:
 - Physical gestures and actions are a central part of intimacy in VR. To some users, being able to **‘feel’ virtual touch** through the phenomenon of *phantom touch* makes **physical interactions more intimate**.
 - *Mirrors* in VR have the potential to enhance physical interactions by **increasing awareness of one’s virtual surroundings**, and enhancing the sense of embodiment in an avatar.
-- In VR, users can use more than just their avatar or voice to express themselves. Sometimes, even the world around them can be used to express emotions, agreement or interest in a **multi-modal way**.
+- Social VR users can use more than just their avatar or voice to express themselves. Sometimes, even the world around them can be used to express emotions, agreement or interest in a **multi-modal way**.
 - The hats in Firefly Island, which glow when users wearing them get close to each other demonstrated how **physical interactions** in VR can be complemented by accompanying **visual feedback**. This can be used to guide users towards specific locations or actions.
 - Encouraging **learning and teaching opportunities** between users can be a way to foster interdependence and connection.
 
