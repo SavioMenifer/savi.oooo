@@ -1,0 +1,7 @@
+<style>
+  {% for lab in collections.lab reversed %}
+  .lab-item:nth-of-type({{ forloop.index }}) a {
+    text-decoration-color: {{ lab.data.color }};
+  }
+  {% endfor %}
+</style>

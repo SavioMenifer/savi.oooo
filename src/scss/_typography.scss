@@ -43,7 +43,8 @@ nav a:hover {
 }
 
 address a:hover,
-.lab-item a:hover {
+.lab-item a:hover,
+.page-intro a:hover {
   opacity: 0.6;
 }
 
@@ -62,12 +63,17 @@ address a:hover,
 }
 
 .lab-item a {
-  text-decoration-thickness: 0.1em;
+  text-decoration-thickness: 0.2em;
+  text-decoration-skip-ink: none;
 }
 
 .work strong {
   color: $secondary-text-color-light;
   font-weight: bold;
+}
+
+.page-intro a {
+  text-decoration-style: dotted;
 }
 
 @media (prefers-color-scheme: dark) {

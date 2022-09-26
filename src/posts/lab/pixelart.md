@@ -4,6 +4,7 @@ subtitle: My journey with pixel art
 date: 2022-01-13
 description:
     I enjoy creating pixel art, and I'm always trying to learn and improve my technique. Here is everything I have made so far.
+color: "#bc0da9"
 tags: lab
 layout: lab
 ---

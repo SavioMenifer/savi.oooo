@@ -7,6 +7,7 @@ description:
 cover:
     src: assets/lab/creator-jam-darkness/cover.jpg
     alt: A dark subway tunnel with a subway car glowing in neon colours, and glowing rocks embedded in the wall.
+color: "#8342f3"
 tags: lab
 layout: lab
 ---
