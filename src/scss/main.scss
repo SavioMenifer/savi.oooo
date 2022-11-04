@@ -86,10 +86,10 @@
 
 .eyeball {
   border-radius: 50%;
-  width: 0.5em;
-  height: 0.5em;
+  width: 0.65em;
+  height: 0.65em;
   background-color: black;
-  transform-origin: bottom;
+  transform-origin: 50% 77%; //50%, (0.5/size)*100 %
   transition: transform ease 0.1s;
 }
 

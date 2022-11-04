@@ -325,7 +325,7 @@ const happyEyes = function () {
 const resetEyes = function () {
   for (var i = 0; i < eyes.length; i++) {
     eyeballs[i].style.transition = "transform ease 0.1s";
-    eyeballs[i].style.transform = "translateY(0.25em) scale(1)";
+    eyeballs[i].style.transform = "translateY(0.175em) scale(1)"; // translate Y is (1-size of eyeball)/2
   }
 };
 
