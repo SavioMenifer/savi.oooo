@@ -281,17 +281,20 @@ const miiPointerProximity = function (e) {
     y: miiRect.top + miiRect.height / 2,
   };
 
+  if (eye_state === "open") {
+    googlyEyes(e);
+  }
+
   if (
     Math.abs(e.clientX - miiCenter.x) < 100 &&
     Math.abs(e.clientY - miiCenter.y) < 100
   ) {
     if (eye_state !== "happy") {
       openEyes();
-      googlyEyes(e);
     }
   } else {
     if (snapped) closeEyes();
-    else if (eye_state === "open") resetEyes();
+    //else if (eye_state === "open") resetEyes();
   }
 };
 
@@ -316,7 +319,7 @@ const happyEyes = function () {
   for (var i = 0; i < eyes.length; i++) {
     eyes[i].style.clipPath =
       "path('M 14 8 C 14 9.6 12 6.4 8 6.4 S 2 9.6 2 8 S 4.32 3.2 8 3.2 S 14 6.4 14 8 Z')";
-    eyeballs[i].style.transition = "transform ease 0.1s";
+    //eyeballs[i].style.transition = "transform ease 0.1s";
     eyeballs[i].style.transform = "translateY(0.4em) scale(2)";
   }
   eye_state = "happy";
@@ -324,7 +327,7 @@ const happyEyes = function () {
 
 const resetEyes = function () {
   for (var i = 0; i < eyes.length; i++) {
-    eyeballs[i].style.transition = "transform ease 0.1s";
+    //eyeballs[i].style.transition = "transform ease 0.1s";
     eyeballs[i].style.transform = "translateY(0.175em) scale(1)"; // translate Y is (1-size of eyeball)/2
   }
 };
