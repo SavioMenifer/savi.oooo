@@ -169,6 +169,7 @@ lite-youtube {
 .work > pre[class*="language-"] {
   margin-top: 1.5em;
   margin-bottom: 2em;
+  border-radius: $work-page-border-radius;
 }
 
 .work > .date {
@@ -265,7 +266,6 @@ lite-youtube {
     grid-column: 4 / 10;
   }
   .work > pre[class*="language-"] {
-    border-radius: $work-page-border-radius;
     grid-column: 4 / 12;
   }
 }

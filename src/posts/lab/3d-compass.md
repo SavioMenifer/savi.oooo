@@ -49,7 +49,7 @@ The target position that we obtained is in the **World** space. To correctly det
 Vector3 relativeTarget = transform.parent.InverseTransformPoint(target);
 ```
 
-Once we have the `relativeTarget` coordinates, we can determine how much the needle should rotate along the y-axis so that it points towards the Target. We use the `Mathf.Atan2` function to calculate this needleRotation. `Atan2(x, z)` calculates the angle between the ray from the origin to the point `(x, z)` and the z-axis, as shown in the figure below. This is how much our needle should rotate.
+Once we have the `relativeTarget` coordinates, we can determine how much the needle should rotate along the y-axis so that it points towards the Target. We use the `Mathf.Atan2` function to calculate the needle rotation. `Atan2(x, z)` calculates the angle between the ray from the origin to the point `(x, z)` and the z-axis, as shown in the figure below. This is how much our needle should rotate.
 
 ![Atan2(x, z) returns the angle θ between the ray from the compass's center to the point (x, z) and the positive z-axis.](assets/lab/3d-compass/atan.jpg){.contained}
 
