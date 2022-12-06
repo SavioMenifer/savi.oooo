@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/">
+<link href="main.css" rel="stylesheet">
+<link rel="icon" href="favicon.ico">
+
+<title>Unity Tutorial: Making a 3D Compass</title>
+<meta name="description" content="In this tutorial, I show you how to create a 3D handheld compass game object in Unity that can be moved and rotated in 3D space, while the needle keeps pointing in a specified target direction.">
+
+<meta property="og:title" content="Unity Tutorial: Making a 3D Compass">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://savi.ooo/lab/3d-compass">
+
+<meta property="og:description" content="In this tutorial, I show you how to create a 3D handheld compass game object in Unity that can be moved and rotated in 3D space, while the needle keeps pointing in a specified target direction.">
+
+  </head>
+
+  <body id="lab-page">
+    <header class="sidebar secondary-column">
+  <div class="nav-group secondary-column">
+    <div class="mii">
+      <div class="mii-slot"></div>
+      <div id="container">
+        <div id="dragMe">
+          <div class="drawables">
+            <div class="eye">
+              <div class="eyeball"></div>
+            </div>
+            <div class="eye">
+              <div class="eyeball"></div>
+            </div>
+          </div>
+        </div>
+        <div class="tooltip-container">
+          <div class="tooltip">
+            <div class="tooltip-text"></div>
+            <div id="arrow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <a class="work-link" href="/">Work</a>
+      <a class="about-link" href="about">About</a>
+      <a class="lab-link" href="lab">Lab</a>
+    </nav>
+  </div>
+
+  <div class="header-name secondary-column" chat="Yup, that's me!">
+    <h2>Savio Menifer</h2>
+    
+    <span> Creating future experiences </span>
+    
+  </div>
+</header>
+
+    <main>
+      <article class="page-content work">
+        <h1 class="heading">Unity Tutorial: Making a 3D Compass</h1>
+        <span class="date">6 December 2022</span>
+        <p><em>A video version of this tutorial is available <a href="https://www.youtube.com/watch?v=vlTcJgWVzus">here</a>.</em></p>
+<p>I recently wanted to create a handheld compass for a VR game that I am working on. This seemingly simple goal took me a day of fiddling around with rotations and quaternions, until I found a solution that was simple and satisfactory enough. Here, I share what I learned so that you can easily implement similar functionality in your games and apps. Let’s see how our compass works:</p>
+<figure class="contained"><video controls preload="metadata">
+<source type="video/mp4" src="assets/lab/3d-compass/compass.mp4">
+Your browser does not support playing HTML5 video. You can <a href="assets/lab/3d-compass/compass.mp4" download="">download a copy of the video file</a> instead.
+Here is a description of the content: A screen recording of the Unity editor showing a compass being moved around and rotated, while the compass needle always points to a sphere in the center of the world.
+</video><figcaption>As you can see, the compass points towards the sphere in the middle, but we can also make it point towards a specific direction (e.g. North), much like a traditional compass</figcaption></figure>
+<p>To start, we first create a simple compass object consisting of a compass body and a needle. The <em>Compass Body</em> is a simple cylinder primitive that is squashed along the y-axis to create a flat disc.</p>
+<figure class="contained">
+          <picture>
+            <source type="image/webp" sizes="100vw" srcset="assets/lab/3d-compass/compass-base-1600w.webp 1600w, assets/lab/3d-compass/compass-base-1919w.webp 1919w">
+            <source type="image/jpeg" sizes="100vw" srcset="assets/lab/3d-compass/compass-base-1600w.jpeg 1600w, assets/lab/3d-compass/compass-base-1919w.jpeg 1919w">
+            <img height="976" width="1919" src="assets/lab/3d-compass/compass-base.png" alt="Unity screenshot showing a flattened cylinder which makes up the base of our compass." class="contained">
+          </picture></figure>
+<p>Next, we create a simple needle which is an elongated cube that is aligned parallel to the compass body, outward from the center. This <em>Needle</em> will rotate along the y-axis of the compass body, to point towards our <em>Target</em> direction.</p>
+<figure class="contained">
+          <picture>
+            <source type="image/webp" sizes="100vw" srcset="assets/lab/3d-compass/compass-needle-1600w.webp 1600w, assets/lab/3d-compass/compass-needle-1919w.webp 1919w">
+            <source type="image/jpeg" sizes="100vw" srcset="assets/lab/3d-compass/compass-needle-1600w.jpeg 1600w, assets/lab/3d-compass/compass-needle-1919w.jpeg 1919w">
+            <img decoding="async" loading="lazy" height="976" width="1919" src="assets/lab/3d-compass/compass-needle.png" alt="Unity screenshot showing an elongated cube which makes up the needle of our compass." class="contained">
+          </picture></figure>
+<p>To make rotating the needle easier, we first create an empty GameObject called <em>Needle Parent</em> as a child of the compass body, and reset its position and rotation so that it is perfectly aligned with the compass body. The Needle is then added as a child under this <em>Needle Parent</em>.</p>
+<figure class="contained">
+          <picture>
+            <source type="image/webp" sizes="100vw" srcset="assets/lab/3d-compass/compass-empty-1600w.webp 1600w, assets/lab/3d-compass/compass-empty-1919w.webp 1919w">
+            <source type="image/jpeg" sizes="100vw" srcset="assets/lab/3d-compass/compass-empty-1600w.jpeg 1600w, assets/lab/3d-compass/compass-empty-1919w.jpeg 1919w">
+            <img decoding="async" loading="lazy" height="976" width="1919" src="assets/lab/3d-compass/compass-empty.png" alt="Unity screenshot showing the needle parented under an empty GameObject called Needle Parent, which is parented under the compass body with its position and rotation set to zero." class="contained">
+          </picture></figure>
+<p>When creating your compass, pay attention to the rotation of each GameObject. It can be helpful to switch Unity’s <em>Tool Handle Rotation</em> setting to <em>Local</em>, and ensure that their rotations match the ones shown in this tutorial. This tutorial is written with the assumption that the <em>Needle</em> is aligned towards the positive z-axis when creating the compass.</p>
+<p>To make the needle point towards our <em>Target</em>, we will write a script to rotate the <em>Needle Parent</em> along the y-axis. This script will be attached to the <em>Needle Parent</em>.</p>
+<p>We first need to specify a <em>Target</em> that our compass will point towards. This <em>Target</em> can be a GameObject, a point, or a specific direction (e.g. <code class="language-">Vector3.Forward</code>). In our case, we use a sphere GameObject in the scene that is referenced as <code class="language-">targetObject</code>. We first obtain the position of this <code class="language-">targetObject</code>:</p>
+<pre class="language-cs"><code class="language-cs"><span class="token class-name">Vector3</span> target <span class="token operator">=</span> targetObject<span class="token punctuation">.</span>transform<span class="token punctuation">.</span>position<span class="token punctuation">;</span></code></pre>
+<p>If we want to use a general direction instead of a GameObject, the target position can be obtained by adding the desired direction vector to the transform of the <em>Needle Parent</em>:</p>
+<pre class="language-cs"><code class="language-cs"><span class="token class-name">Vector3</span> target <span class="token operator">=</span> transform<span class="token punctuation">.</span>position <span class="token operator">+</span> Vector3<span class="token punctuation">.</span>forward<span class="token punctuation">;</span> <span class="token comment">// (to make needle point north)</span></code></pre>
+<p>The target position that we obtained is in the <strong>World</strong> space. To correctly determine the needle rotation even when the compass itself is rotated, we need the obtain the position of our <em>Target</em> in the <strong>Local</strong> space of our compass. So, we convert the World space coordinates of the <em>Target</em> to the <strong>Local</strong> space coordinates of our compass body (which is the parent of the <em>Needle Parent</em> GameObject that the script is attached to):</p>
+<pre class="language-cs"><code class="language-cs"><span class="token class-name">Vector3</span> relativeTarget <span class="token operator">=</span> transform<span class="token punctuation">.</span>parent<span class="token punctuation">.</span><span class="token function">InverseTransformPoint</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Once we have the <code class="language-">relativeTarget</code> coordinates, we can determine how much the needle should rotate along the y-axis so that it points towards the Target. We use the <code class="language-">Mathf.Atan2</code> function to calculate this needleRotation. <code class="language-">Atan2(x, z)</code> calculates the angle between the ray from the origin to the point <code class="language-">(x, z)</code> and the z-axis, as shown in the figure below. This is how much our needle should rotate.</p>
+<figure class="contained">
+          <picture>
+            <source type="image/webp" sizes="100vw" srcset="assets/lab/3d-compass/atan-1600w.webp 1600w, assets/lab/3d-compass/atan-1920w.webp 1920w">
+            <source type="image/jpeg" sizes="100vw" srcset="assets/lab/3d-compass/atan-1600w.jpeg 1600w, assets/lab/3d-compass/atan-1920w.jpeg 1920w">
+            <img decoding="async" loading="lazy" height="1080" width="1920" src="assets/lab/3d-compass/atan.jpg" alt="Atan2(x, z) returns the angle θ between the ray from the compass's center to the point (x, z) and the positive z-axis." class="contained">
+          </picture></figure>
+<p>Since <code class="language-">relativeTarget</code> is in the <strong>Local</strong> space, the origin in the context of <code class="language-">Atan2</code> is the origin of the compass body, not of the world itself. Also, we do not use the y coordinate of <code class="language-">relativeTarget</code> since our needle is flat on the body of our compass, and it does not show any information about the y elevation of our target. Since <code class="language-">Atan2</code> gives us an angle in radians, we convert it to degrees and obtain our <code class="language-">needleRotation</code> as follows:</p>
+<pre class="language-cs"><code class="language-cs"><span class="token class-name"><span class="token keyword">float</span></span> needleRotation <span class="token operator">=</span> Mathf<span class="token punctuation">.</span><span class="token function">Atan2</span><span class="token punctuation">(</span>relativeTarget<span class="token punctuation">.</span>x<span class="token punctuation">,</span> relativeTarget<span class="token punctuation">.</span>z<span class="token punctuation">)</span> <span class="token operator">*</span> Mathf<span class="token punctuation">.</span>Rad2Deg<span class="token punctuation">;</span></code></pre>
+<p>Now, all we need to do is to apply this <code class="language-">needleRotation</code> to our <em>Needle Parent</em>. To do this, we apply a <code class="language-">localRotation</code> to our transform, passing the <code class="language-">needleRotation</code> as the y rotation and keeping the x and z rotations as zero:</p>
+<pre class="language-cs"><code class="language-cs">transform<span class="token punctuation">.</span>localRotation <span class="token operator">=</span> Quaternion<span class="token punctuation">.</span><span class="token function">Euler</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> needleRotation<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Our final script looks like this:</p>
+<pre class="language-cs"><code class="language-cs"><span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Collections</span><span class="token punctuation">;</span><br><span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic</span><span class="token punctuation">;</span><br><span class="token keyword">using</span> <span class="token namespace">UnityEngine</span><span class="token punctuation">;</span><br><br><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PointCompass</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">MonoBehaviour</span></span><br><span class="token punctuation">{</span><br>    <span class="token keyword">public</span> <span class="token class-name">GameObject</span> targetObject<span class="token punctuation">;</span><br><br>    <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Update</span><span class="token punctuation">(</span><span class="token punctuation">)</span><br>    <span class="token punctuation">{</span><br>        <span class="token comment">// get worldspace coordinates of target</span><br>        <span class="token class-name">Vector3</span> target <span class="token operator">=</span> targetObject<span class="token punctuation">.</span>transform<span class="token punctuation">.</span>position<span class="token punctuation">;</span><br>        <span class="token comment">// Vector3 target = transform.position + Vector3.forward; // (to make needle point north)</span><br><br>        <span class="token comment">// convert to local coordinate space of compass body</span><br>        <span class="token class-name">Vector3</span> relativeTarget <span class="token operator">=</span> transform<span class="token punctuation">.</span>parent<span class="token punctuation">.</span><span class="token function">InverseTransformPoint</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>        <span class="token comment">// determine needle rotation with atan2</span><br>        <span class="token class-name"><span class="token keyword">float</span></span> needleRotation <span class="token operator">=</span> Mathf<span class="token punctuation">.</span><span class="token function">Atan2</span><span class="token punctuation">(</span>relativeTarget<span class="token punctuation">.</span>x<span class="token punctuation">,</span> relativeTarget<span class="token punctuation">.</span>z<span class="token punctuation">)</span> <span class="token operator">*</span> Mathf<span class="token punctuation">.</span>Rad2Deg<span class="token punctuation">;</span><br><br>        <span class="token comment">// apply needle rotation</span><br>        transform<span class="token punctuation">.</span>localRotation <span class="token operator">=</span> Quaternion<span class="token punctuation">.</span><span class="token function">Euler</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> needleRotation<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+<p>That’s it! The compass should now always point towards the <em>Target</em>. The code above is the minimum required to make the compass work, but you can modify it to make it even better. For example, you could make the <code class="language-">needleRotation</code> change smoothly with a specified speed with <code class="language-">Mathf.Lerp</code>. Hope it helped!</p>
+
+      </article>
+      <footer class="page-content">
+  <span>
+    View this website’s source code on
+    <a href="https://github.com/SavioMenifer/saviomenifer.github.io" target="_blank">GitHub</a>.
+  </span>
+</footer>
+
+    </main>
+    <address class="sidebar secondary-column" chat="Please don't ever hesitate to reach out to me. Go on, send me a message!">
+  <a class="email" href="mailto:hello@savi.ooo">hello@savi.ooo</a>
+  <a class="external" href="https://read.cv/savio" target="_blank">Resume</a>
+  <a href="https://www.linkedin.com/in/saviomenifer" target="_blank">LinkedIn</a>
+  <a href="https://www.behance.net/saviomenifer" target="_blank">Behance</a>
+</address>
+ <script src="bundle.js"></script>
+
+  </body>
+</html>
