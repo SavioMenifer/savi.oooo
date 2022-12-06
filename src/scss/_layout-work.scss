@@ -162,6 +162,19 @@ lite-youtube {
   padding-left: 1em;
 }
 
+.work > :not(pre) > code[class*="language-"] {
+  font-size: 0.9em;
+}
+
+.work > pre[class*="language-"] {
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+}
+
+.work > .date {
+  padding-bottom: 2em;
+}
+
 @media (min-width: 40em) {
   .work > figure > * {
     grid-column: 2/12;
@@ -250,5 +263,9 @@ lite-youtube {
   }
   .work > figure.contained * {
     grid-column: 4 / 10;
+  }
+  .work > pre[class*="language-"] {
+    border-radius: $work-page-border-radius;
+    grid-column: 4 / 12;
   }
 }

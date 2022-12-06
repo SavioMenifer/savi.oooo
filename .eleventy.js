@@ -1,6 +1,8 @@
 const Image = require("@11ty/eleventy-img");
 const { parseHTML } = require("linkedom");
 const path = require("path");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addLiquidShortcode("youtube", function (id, title) {
@@ -33,6 +35,16 @@ module.exports = function (eleventyConfig) {
     .use(container, "group")
     .use(container, "slider")
     .use(footnote);
+
+  // add support for inline code highlighting in markdown https://github.com/11ty/eleventy-plugin-syntaxhighlight/issues/38
+  markdownLib.renderer.rules.code_inline = (
+    tokens,
+    idx,
+    { langPrefix = "" }
+  ) => {
+    const token = tokens[idx];
+    return `<code class="${langPrefix}">${token.content}</code>`;
+  };
 
   eleventyConfig.setLibrary("md", markdownLib);
 
@@ -123,6 +135,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("removeHTML", function (value) {
     return value.replace(/\.html$/, "");
   });
+
+  eleventyConfig.addFilter("formatDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
+      "d LLLL yyyy"
+    );
+  });
+
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   return {
     dir: {
