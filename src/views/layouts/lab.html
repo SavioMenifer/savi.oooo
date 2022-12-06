@@ -9,6 +9,7 @@
     <main>
       <article class="page-content work">
         <h1 class="heading">{{ title }}</h1>
+        <span class="date">{{ date | formatDate }}</span>
         {{ content }}
       </article>
       {% include "footer.html" %}
