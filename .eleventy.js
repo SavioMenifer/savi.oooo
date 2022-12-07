@@ -34,6 +34,7 @@ module.exports = function (eleventyConfig) {
     .use(container, "large-figure-text")
     .use(container, "group")
     .use(container, "slider")
+    .use(container, "tip")
     .use(footnote);
 
   // add support for inline code highlighting in markdown https://github.com/11ty/eleventy-plugin-syntaxhighlight/issues/38

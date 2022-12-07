@@ -176,6 +176,13 @@ lite-youtube {
   padding-bottom: 2em;
 }
 
+.work > .tip {
+  background: rgba(221, 172, 70, 0.13);
+  border-radius: $work-page-border-radius;
+  padding: 1em 1em 0.5em 1em;
+  margin-bottom: 2em;
+}
+
 @media (min-width: 40em) {
   .work > figure > * {
     grid-column: 2/12;
@@ -267,5 +274,11 @@ lite-youtube {
   }
   .work > pre[class*="language-"] {
     grid-column: 4 / 12;
+  }
+}
+
+@media (min-width: 100em) {
+  .work > pre[class*="language-"] {
+    grid-column: 4 / 10;
   }
 }
