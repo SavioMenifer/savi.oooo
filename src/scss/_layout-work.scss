@@ -56,6 +56,19 @@
   list-style: none;
 }
 
+.work > details {
+  font-size: 0.8em;
+}
+
+.work > details summary {
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+
+.work > details summary > * {
+  display: inline;
+}
+
 .work > figure {
   display: contents;
 }
@@ -114,8 +127,15 @@
 }
 
 .work > .small-figure-text figure,
-.work > .large-figure-text figure {
+.work > .large-figure-text figure,
+.work > .contained-figure-text figure {
   margin: 0;
+}
+
+.work > .contained-figure-text figure,
+.work > .contained-figure-text .group {
+  margin-top: 1.5em;
+  font-size: 0.9em;
 }
 
 .work > .small-figure-text .group,
@@ -124,7 +144,8 @@
 }
 
 .work > .small-figure-text video,
-.work > .large-figure-text video {
+.work > .large-figure-text video,
+.work > .contained-figure-text video {
   width: 100%;
 }
 
@@ -255,13 +276,22 @@ lite-youtube {
   .work > .small-figure-text .group {
     margin-bottom: 0;
   }
-  .work > .large-figure-text {
+  .work > .large-figure-text,
+  .work > .contained-figure-text {
     display: contents;
   }
   .work > .large-figure-text > figure {
     grid-column: 4 / 9;
     padding-right: 2em;
     margin-bottom: 2em;
+  }
+  .work > .contained-figure-text > figure {
+    grid-column: 4 / 8;
+    padding-right: 2em;
+    margin-bottom: 2em;
+  }
+  .work > .contained-figure-text > .group {
+    grid-column: 8 / 10;
   }
   .work > .large-figure-text > .group {
     grid-column: 9 / 12;

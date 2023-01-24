@@ -32,6 +32,7 @@ module.exports = function (eleventyConfig) {
     .use(container, "info")
     .use(container, "small-figure-text")
     .use(container, "large-figure-text")
+    .use(container, "contained-figure-text")
     .use(container, "group")
     .use(container, "slider")
     .use(container, "tip")
