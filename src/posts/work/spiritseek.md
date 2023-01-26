@@ -41,7 +41,7 @@ January 2023
 During my internship at Studio VRij, I had the opportunity to use their VR tracking system to create something unique. The system is centred around the concept of total freedom in VR—one where people can put on a standalone headset like the Quest 2 and walk around in a physical space to experience a virtual reality world. The system relies on hand tracking instead of controllers, and needs no external devices other than the headset itself, providing a truly untethered experience. It is also made to be enable social experiences, where many people can come together in a physical space and experience VR together. Spirit Seek was born as a project to create a fun, playful experience using this VR tracking system.
 
 :::: contained-figure-text
-![TODO](assets/work/spiritseek/tracking.mp4)
+![Three people wearing VR headsets in a large empty space, walking around in the physical space while playing hide and seek in the virtual space.](assets/work/spiritseek/tracking.mp4)
 ::: group
 *A spectator's view of hide and seek showing the tracking system with standalone headsets and hand tracking*
 :::
@@ -53,7 +53,7 @@ While thinking about games that can be played in a co-located space, we thought 
 
 One of the unique possibilities within VR spaces is to create a sense of scale in a virtual world. For example, if you had a house in VR, you could view it from the perspective of an ant on the floor, or you could be a giant peering into a window as if it were a doll house. The world I designed for Spirit Seek was heavily inspired by the 2010 Studio Ghibli film *Arrietty*, where the main character is a tiny person living in the walls and floor of a house. At first, I envisioned the world as a small garden patch with players as miniature creatures scurrying about. The natural environment could provide many nooks and crannies to hide behind, while being a relaxing setting to play in.
 
-![TODO](assets/work/spiritseek/moodboard.jpg "Moodboard showing stills from Arrietty, along with other inspiration"){.contained}
+![A screenshot of a Miro board showing various images of nature, flowers, and gardens. Two stills from the film Arrietty are also present.](assets/work/spiritseek/moodboard.jpg "Moodboard showing stills from Arrietty, along with other inspiration"){.contained}
 
 ## How the game works
 
@@ -63,27 +63,27 @@ Spirit Seek differs from classic hide and seek in a few ways. The seeker and hid
 
 I created a prototype of the game world in Neos VR. This allowed me to view and manipulate world elements in VR, and quickly get a sense of what the world would look like from a player perspective. Here, I experimented with different elements such as grass, rocks and other elements that players could hide behind. After creating a layout for the world, I used Blender to create the more detailed 3D environment. The environment includes both 3D models I created myself, and ones from Sketchfab which I tweaked in Blender for my needs.
 
-![TODO](assets/work/spiritseek/lookup.jpg){.contained}
+![A player perspective of the game world, showing plants, grass, and sunlight shafts through the tree above.](assets/work/spiritseek/lookup.jpg){.contained}
 
 The textures for the world were created in Substance Painter. It was my first time using this software, and it was a very rewarding experience learning how to create textures from scratch. I had a lot of fun discovering its capabilities, thanks to the many tutorials on YouTube.
 
-![TODO](assets/work/spiritseek/texturing.jpg "Creating the textures in Substance Painter"){.contained}
+![A screenshot of Substance Painter with textures for Spirit Seek.](assets/work/spiritseek/texturing.jpg "Creating the textures in Substance Painter"){.contained}
 
 The avatars I created for Spirit Seek were inspired by the forest spirits in Japanese folklore called *kodama.* I wanted to create cute, playful avatars that reflected the mischievous, goofy gameplay that Spirit Seek was all about. I created two subtly different types of avatars for the hiders and seeker. In the game, players have the ability to choose a colour for their avatar.
 
-![TODO](assets/work/spiritseek/avatars.mp4 "Avatars for seeker (left) and hider (right)"){.contained}
+![Two cute-looking avatars side by side. The avatars have oblong heads and a disconnected floating egg-shaped body. The left avatar has mushrooms on its head, while the right avatar has a leaf stalk.](assets/work/spiritseek/avatars.mp4 "Avatars for seeker (left) and hider (right)"){.contained}
 
 ## Interactions
 
 One of the interesting parts of the design of Spirit Seek was how to communicate the game state and goals to players. I created a hand UI similar to a wristwatch that players could quickly glance at. With this, players can know if they are a hider or seeker, how many hiders are remaining, or how many orbs that they had to collect. The UI changes depending on the game state, bringing up the most relevant information at the right time for players.
 
-![TODO](assets/work/spiritseek/handui.jpg "Hand UI showing game states and goals"){.contained}
+![Side by side shots of the wrist-based hand UI. The UI has text and graphical elements conveying the current game state and goals to players.](assets/work/spiritseek/handui.jpg "Hand UI showing game states and goals"){.contained}
 
-A peculiar problem that I encountered during design was how the seeker could “catch” a hider in the game. The traditional way of tagging a player by touching them was tricky in VR, as the avatars did not precisely reflect the body of the player, and getting too close to the other player could cause them to collide. The solution to this was a “grab” interaction where the player could squeeze they hands, and their hand would fly out in front of them. This allows the seeker to catch the hider from a safe distance, with a fun side-effect that you could punch others by squeezing your hand :)
+A peculiar problem that I encountered during design was how the seeker could “catch” a hider in the game. The traditional way of tagging a player by touching them was tricky in co-located VR, as the avatars did not precisely correspond to the body of the player, and getting too close to the other player could cause them to bump into each other. The solution to this was a “grab” interaction where the player could make a fist, and their hand would fly out in front of them. This allows the seeker to catch the hider from a safe distance, with a fun side-effect that you could punch others by squeezing your hand :)
 
-![TODO](assets/work/spiritseek/handextend.mp4 "Hand interaction to catch a hider"){.contained}
+![A perspective view of the player in game, where they make a fist with their hands and their virtual hand extends a little bit forward, allowing them to catch another player.](assets/work/spiritseek/handextend.mp4 "Hand interaction to catch a hider"){.contained}
 
-Spirit Seek was developed in Unity, with Normcore providing the multiplayer functionality. While it was challenging at first, Normcore let me create and manage game states and data models easily. Aside from C# scripting, I also made use of Unity’s Shader Graph and VFX Graph to create procedural visual elements for the game. For example, the water shader used in the game was custom made, optimised for performance in the Quest 2.
+Spirit Seek was developed in Unity, with Normcore providing the multiplayer functionality. While it was challenging to learn at first, Normcore let me create and manage game states and data models easily. Aside from C# scripting, I also made use of Unity’s Shader Graph and VFX Graph to create procedural visual elements for the game. For example, the water shader used in the game was custom made, optimised for performance in the Quest 2.
 
 ## Future
 
@@ -91,13 +91,13 @@ Spirit Seek is a fun, light hearted way to play with others in a room-scale VR s
 
 ::: slider
 
-![TODO](assets/work/spiritseek/lookdown.jpg)
+![A bird's eye view of the world in Spirit Seek.](assets/work/spiritseek/lookdown.jpg)
 
-![TODO](assets/work/spiritseek/seekerpov.jpg)
+![A view of the world from the seeker's point of view](assets/work/spiritseek/seekerpov.jpg)
 
-![TODO](assets/work/spiritseek/wideworld.jpg)
+![A wide shot of the world in Spirit Seek.](assets/work/spiritseek/wideworld.jpg)
 
-![TODO](assets/work/spiritseek/hiders.jpg)
+![A scene with two hiders in the world.](assets/work/spiritseek/hiders.jpg)
 
 :::
 
