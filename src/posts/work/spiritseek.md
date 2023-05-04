@@ -7,7 +7,7 @@ description:
 cover:
     src: assets/work/spiritseek/thumb2.jpg
     alt: A stylised garden environment with a tiny cute spirit creature peeking from behind a grass blade.
-    blur-color: "#459a3e"
+    blur-color: "#3d8c36"
 color: "#5fcf4e"
 tags: work
 layout: work
